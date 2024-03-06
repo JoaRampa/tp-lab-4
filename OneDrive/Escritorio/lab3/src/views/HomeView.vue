@@ -1,33 +1,34 @@
 <template>
   <div class="events">
-    <EventCard v-for="event in events" :key="event.id" :event="event"/>
+    <EventCard v-for="event in events" :key="event.id" :event="event" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import EventCard from "@/components/EventCard.vue"
+import EventCard from "@/components/EventCard.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
     EventCard,
   },
-  data(){
-    return{
+  data() {
+    return {
       events: [
-      {
-        title: 'Probando'
-      }]
-    }
-  }
-}
+        {
+          title: "Probando",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>
-  .events{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 </style>
