@@ -1,16 +1,16 @@
 <template>
-  <div class="event-card">
-    <span>@ {{ event.time }} on {{ event.date }}</span>
-    <h4>{{ event.title }}</h4>
-  </div>
+    <div class="event-card">
+      <h4>{{ event.title }}</h4>
+      <span>${{ event.ask}} on {{ event.time }}</span>
+    </div>
 </template>
 
 <script>
 export default {
   name: "EventCard",
-  props: {
-    event: Object,
-  },
+  props:{
+    event: Object
+  }
 };
 </script>
 

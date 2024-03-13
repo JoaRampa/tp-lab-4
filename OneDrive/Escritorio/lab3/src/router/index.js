@@ -6,12 +6,13 @@ import About from '@/views/AboutView.vue';
 const routes = [
   {
     path: '/',
-    name: 'EvenList',
+    name: 'EventList',
     component: EventList,
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/About',
+    props:true,
+    name: 'About',
     component: About
   },
 ]

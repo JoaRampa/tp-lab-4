@@ -1,38 +1,61 @@
 <template>
   <div class="events">
-    <EventCard v-for="event in events" :key="event.id" :event="event" />
+    <h1>Alumno</h1>
+    <form @submit.prevent="ingresarDatos">
+      <label>ID:</label>
+      <input type="text" v-model="id">
+      <br>
+      <label>Nombre:</label>
+      <input type="text" v-model="nombre">
+      <br>
+      <button type="submit">Guardar</button>
+    </form>
+    <ul>
+      <li v-for="(persona, index) in personas" :key="index">
+        ID: {{ persona.id }} - Nombre: {{ persona.nombre }}
+      </li>
+    </ul>
+
+    <EventCard v-for="event in alumnos" :key="event.id" :event="event" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+
 import EventCard from "@/components/EventCard.vue";
-import EventService from '@/services/EventService.js'
+import EventService from '@/services/EventService.js';
 
 export default {
-  name: "EventList",
-  components: {
-    EventCard,
-  },
+  name: "EvenList",
   data() {
     return {
-      events: null
+      id: '',
+      nombre: '',
+      alumnos: []
     };
   },
-  
-  created(){
+  methods: {
+    ingresarDatos() {
+      const nuevoAlumno = {
+        id: this.id,
+        nombre: this.nombre
+      };
+      this.alumnos.push(nuevoAlumno);
+      this.id = '';
+      this.nombre = '';
+      alert("Datos ingresados correctamente.");
+    }
+  },
+  created() {
     EventService.getEvents()
-    .then(response => {this.events = response.data})
-    .catch(error => {console.log(error)})
+      .then(response => {
+        this.alumnos = response.data;
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
-}
+};
 
 </script>
 
-<style scoped>
-.events {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-</style>

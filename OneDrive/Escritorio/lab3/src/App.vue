@@ -1,7 +1,8 @@
 <template>
   <nav>
     <router-link to="/">Log In</router-link> |
-    <router-link to="/about">Criptos</router-link>
+    <router-link to="/about">Cripto</router-link>
+    <h1>GARGO</h1>
   </nav>
   <router-view />
 </template>
