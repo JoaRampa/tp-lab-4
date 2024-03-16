@@ -1,17 +1,23 @@
 /* eslint-disable */
 import { createRouter, createWebHistory } from 'vue-router';
 import EventList from '../views/EventList.vue';
+import EventDetails from '../views/EventDetails.vue';
 import About from '@/views/AboutView.vue';
 
 const routes = [
   {
     path: '/',
     name: 'EventList',
-    component: EventList,
+    component: EventList
+  },
+  {
+    path: '/event/:id',
+    name: 'EventDetails',
+    props: true,
+    component: EventDetails
   },
   {
     path: '/About',
-    props:true,
     name: 'About',
     component: About
   },

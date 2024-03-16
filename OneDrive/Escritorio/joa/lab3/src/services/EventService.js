@@ -14,5 +14,8 @@ const apiUrl = 'https://www.cryptoya.com/api/btc/ars/1';
 export default {
     getEvents(){
         return apiClient.get('/events')
+    },
+    getEvent(id){
+        return apiClient.get('/events/' + id)
     }
 }
