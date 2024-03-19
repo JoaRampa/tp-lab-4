@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <router-link :to="{name: 'EventList'}">Log In</router-link> |
-    <router-link :to="{name: 'About'}">Cripto</router-link>
+    <router-link :to="{ name: 'EventList' }">Log In</router-link> |
+    <router-link :to="{ name: 'About' }">Cripto</router-link>
     <h1>GARGO</h1>
   </nav>
   <router-view />

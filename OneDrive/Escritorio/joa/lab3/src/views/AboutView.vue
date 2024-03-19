@@ -1,42 +1,41 @@
 <template>
-  <div class="About" v-for="evento in coins" :key="evento.id" :evento="evento">
-    <p>{{ evento.title }} on {{ evento.bid }}</p>
+  <div
+    class="About"
+    v-for="(event, index) in evento"
+    :key="event.time"
+    :event="event"
+  >
+    <h4>{{ index }}</h4>
+    <h4>Precio en ARS$ {{ event.ask }}</h4>
   </div>
 </template>
 
 <script>
+import EventService from "@/services/EventService";
 export default {
-  name: 'About',
-  props:{
-    coins: Object
-  },
-  data(){
+  /* props: {
+    coin: "btc",
+    fiat: "usdt"
+  },*/
+  data() {
     return {
-      coins: [
-      { 
-        id:1234,
-        title: "argenbtc",
-        ask: 76328103.67,
-        totalAsk: 76328103.67,
-        bid: 73201070,
-        totalBid: 73201070,
-        time: 1710272453
-      },{
-        id:5668,
-        title: "binancep2p", 
-        ask: 84765241.62,
-        totalAsk: 84765241.62,
-        bid: 75760165.97,
-        totalBid: 75760165.97,
-        time: 1710352637
-      }]   
-    }
-  }
-}
+      evento: null,
+    };
+  },
+  created() {
+    EventService.getApis()
+      .then((response) => {
+        this.evento = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+};
 </script>
 
-<style >
-.About{
+<style>
+.About {
   cursor: pointer;
   border: 1px solid #39495c;
   display: flex;
@@ -47,5 +46,4 @@ export default {
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0, 2);
 }
-
 </style>

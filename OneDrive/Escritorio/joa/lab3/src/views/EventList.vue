@@ -1,42 +1,39 @@
 <template>
   <div class="events">
-    <EventCard v-for="event in events" :key="event.id" :event="event"/>
+    <EventCard v-for="event in events" :key="event.id" :event="event" />
   </div>
 </template>
 
 <script>
-
 import EventCard from "@/components/EventCard.vue";
 import EventService from "@/services/EventService";
 
 export default {
   name: "EvenList",
   components: {
-    EventCard
+    EventCard,
   },
   data() {
     return {
-      events: null
+      events: null,
     };
   },
   created() {
     EventService.getEvents()
-      .then(response => {
-        this.events = response.data
+      .then((response) => {
+        this.events = response.data;
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
-  }
+  },
 };
-
 </script>
 
 <style scoped>
-.events{
+.events {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 </style>
-

@@ -8,20 +8,20 @@
 <script>
 import EventService from "@/services/EventService";
 export default {
-  props: ['id'],
+  props: ["id"],
   data() {
     return {
-      event: null
+      event: null,
     };
   },
   created() {
     EventService.getEvent(this.id)
-      .then(response => {
-        this.event = response.data
+      .then((response) => {
+        this.event = response.data;
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
-  }
+  },
 };
 </script>

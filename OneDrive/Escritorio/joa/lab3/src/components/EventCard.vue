@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="{name: 'EventDetails', params: {id: event.id}}">
+  <router-link :to="{ name: 'EventDetails', params: { id: event.id } }">
     <div class="event-card">
       <h4>{{ event.nombre }}</h4>
     </div>
@@ -9,11 +9,11 @@
 <script>
 export default {
   name: "EventCard",
-  props:{
+  props: {
     event: {
-     type: Object
-    }
-  }
+      type: Object,
+    },
+  },
 };
 </script>
 
