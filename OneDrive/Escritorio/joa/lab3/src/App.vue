@@ -2,7 +2,7 @@
   <nav>
     <router-link :to="{ name: 'EventList' }">Log In</router-link> |
     <router-link :to="{ name: 'About' }">Cripto</router-link>
-    <h1>GARGO</h1>
+    <h1>𓆰𓆪GARGO𓆰𓆪</h1>
   </nav>
   <router-view />
 </template>
@@ -26,6 +26,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: darkviolet;
 }
 </style>

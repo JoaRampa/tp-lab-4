@@ -1,17 +1,17 @@
 <template>
   <div class="events">
-    <EventCard v-for="event in events" :key="event.id" :event="event" />
+    <LogIn />
   </div>
 </template>
 
 <script>
-import EventCard from "@/components/EventCard.vue";
+import LogIn from "@/components/LoginForm.vue";
 import EventService from "@/services/EventService";
 
 export default {
   name: "EvenList",
   components: {
-    EventCard,
+    LogIn,
   },
   data() {
     return {
@@ -30,7 +30,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.gargo {
+  background-color: rgb(10, 2, 28);
+}
 .events {
   display: flex;
   flex-direction: column;
