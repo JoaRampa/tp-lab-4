@@ -2,7 +2,7 @@
   <div
     class="About"
     v-for="(event, index) in evento"
-    :key="event.time"
+    :key="event.index"
     :event="event"
   >
     <h4>{{ index }}</h4>
@@ -11,25 +11,20 @@
 </template>
 
 <script>
-import EventService from "@/services/EventService";
+import { mapGetters, mapActions } from "vuex";
+//import EventService from "@/services/EventService";
 export default {
-  /* props: {
-    coin: "btc",
-    fiat: "usdt"
-  },*/
   data() {
-    return {
-      evento: null,
-    };
+    return {};
+  },
+  methods: {
+    ...mapActions("criptos", ["cargarCriptos"]),
+  },
+  computed: {
+    ...mapGetters("criptos", ["evento"]),
   },
   created() {
-    EventService.getApis()
-      .then((response) => {
-        this.evento = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    this.cargarCriptos();
   },
 };
 </script>
