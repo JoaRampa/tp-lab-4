@@ -6,19 +6,18 @@
 
 <script>
 import LogIn from "@/components/LoginForm.vue";
-import EventService from "@/services/EventService";
+import { mapGetters } from "vuex";
 
 export default {
   name: "EvenList",
   components: {
     LogIn,
   },
-  data() {
-    return {
-      events: null,
-    };
+  computed: {
+    ...mapGetters(["userId"]),
   },
-  created() {
+
+  /*created() {
     EventService.getEvents()
       .then((response) => {
         this.events = response.data;
@@ -26,7 +25,7 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-  },
+  },*/
 };
 </script>
 

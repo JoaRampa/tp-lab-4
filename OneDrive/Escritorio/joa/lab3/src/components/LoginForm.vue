@@ -1,60 +1,45 @@
 <template>
   <div class="logIn">
-    <form @submit.prevent="submitUser" class="id-input" id="form-id">
-      <div id="user-error" v-if="vision.error">
-        Ingrese los datos correctamente para poder {{ razon }}.
+    <form @submit.prevent="handleUser" class="id-input" id="form-id">
+      <div id="user-error" v-if="error">
+        Ingrese los datos correctamente para poder ingresar.
       </div>
       <div class="input-container">
         <input
-          v-model="idText"
+          @keydown.enter="handleUser"
+          v-model="userId"
           type="text"
-          placeholder="Ingrese su ID"
-          name="id"
+          placeholder="Ingrese su ID de usuario"
           id="inputId"
         />
       </div>
-      <div class="input-container">
-        <input
-          v-model="nameText"
-          type="text"
-          placeholder="Ingrese su Nombre"
-          name="nombre"
-          id="input-nombre"
-        />
-      </div>
+
       <button type="submit" id="submit-id">Submit</button>
     </form>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
-  namespaced: true,
   data() {
     return {
-      razon: "",
-      idText: "",
-      nameText: "",
-      id: "",
-      nombre: "",
-      vision: {
-        userForm: true,
-        error: false,
-        id: false,
-      },
+      userId: "",
+      error: false,
     };
   },
   methods: {
-    submitUser() {
-      if (this.idText !== "" && this.nameText !== "") {
-        this.vision.error = false;
-        this.vision.userForm = false;
-        this.vision.id = true;
-        this.razon = "";
+    ...mapActions(["submitUser"]),
+
+    async handleUser() {
+      if (this.userId) {
+        this.error = false;
+        await this.submitUser(this.userId);
         alert("se cargo");
       } else {
-        this.razon = "Registrarse";
-        this.vision.error = true;
+        this.error = true;
+        this.userId = "";
       }
     },
   },

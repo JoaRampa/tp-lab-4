@@ -1,5 +1,6 @@
 import { createStore } from "vuex";
 import criptos from "./criptos";
+import logIn from "./logIn.js";
 
 export default createStore({
   state: {},
@@ -8,5 +9,6 @@ export default createStore({
   actions: {},
   modules: {
     criptos,
+    logIn,
   },
 });
