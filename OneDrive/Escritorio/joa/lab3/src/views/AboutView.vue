@@ -1,30 +1,16 @@
 <template>
-  <div
-    class="About"
-    v-for="(event, index) in evento"
-    :key="event.index"
-    :event="event"
-  >
-    <h4>{{ index }}</h4>
-    <h4>Precio en ARS$ {{ event.ask }}</h4>
+  <div class="About">
+    <CryptoRequestPrice />
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
-//import EventService from "@/services/EventService";
+import CryptoRequestPrice from "../components/CryptoRequestPrice.vue";
+
 export default {
-  data() {
-    return {};
-  },
-  methods: {
-    ...mapActions("criptos", ["cargarCriptos"]),
-  },
-  computed: {
-    ...mapGetters("criptos", ["evento"]),
-  },
-  created() {
-    this.cargarCriptos();
+  name: "AboutView",
+  components: {
+    CryptoRequestPrice,
   },
 };
 </script>

@@ -2,7 +2,7 @@
   <nav>
     <router-link :to="{ name: 'EventList' }">Log In</router-link> |
     <router-link :to="{ name: 'About' }">Cripto</router-link>
-    <h1>𓆰𓆪GARGO𓆰𓆪</h1>
+    <h1 color="darkviolet">𓆰𓆪GARGO𓆰𓆪</h1>
   </nav>
   <router-view />
 </template>
