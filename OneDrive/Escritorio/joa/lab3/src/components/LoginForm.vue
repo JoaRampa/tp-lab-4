@@ -2,7 +2,7 @@
   <div class="logIn">
     <form @submit.prevent="handleUser" class="id-input" id="form-id">
       <div id="user-error" v-if="error">
-        Ingrese los datos correctamente para poder ingresar.
+        Ingrese un userId para poder ingresar.
       </div>
       <div class="input-container">
         <input
@@ -36,7 +36,7 @@ export default {
       if (this.userId) {
         this.error = false;
         await this.submitUser(this.userId);
-        alert("se cargo");
+        this.$router.push("/#");
       } else {
         this.error = true;
         this.userId = "";

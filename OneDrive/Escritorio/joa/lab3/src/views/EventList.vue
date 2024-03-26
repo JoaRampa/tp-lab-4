@@ -1,6 +1,9 @@
 <template>
   <div class="events">
-    <LogIn />
+    <LogIn v-if="!isAuthenticated" />
+    <div v-else>
+      <h1>Bienvenido, {{ userId }}!</h1>
+    </div>
   </div>
 </template>
 
@@ -14,7 +17,7 @@ export default {
     LogIn,
   },
   computed: {
-    ...mapGetters(["userId"]),
+    ...mapGetters(["userId", "isAuthenticated"]),
   },
 };
 </script>
