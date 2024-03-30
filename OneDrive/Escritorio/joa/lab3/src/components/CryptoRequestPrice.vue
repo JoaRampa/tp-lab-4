@@ -1,7 +1,14 @@
 <template>
-  <div class="price-home container-fluid">
+  <div
+    class="price-home container-fluid"
+    :class="{ disabled: !isAuthenticated }"
+  >
     <div class="row">
-      <div v-for="crypto in cryptoList" :key="crypto.code" class="col">
+      <div
+        v-for="crypto in cryptoList"
+        :key="crypto.code"
+        class="crypto-card col-md-4 mb-3"
+      >
         <div class="crypto-card">
           <h5>{{ crypto.name }}</h5>
           <div class="crypto-info">
@@ -25,7 +32,12 @@ import { mapGetters, mapActions } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(["getBTCPrice", "getETHPrice", "getUSDTPrice"]),
+    ...mapGetters([
+      "isAuthenticated",
+      "getBTCPrice",
+      "getETHPrice",
+      "getUSDTPrice",
+    ]),
     cryptoList() {
       return [
         { code: "btc", name: "Bitcoin", price: this.getBTCPrice },
@@ -61,14 +73,15 @@ export default {
 <style scoped>
 .crypto-card {
   background-color: #1e3a4c;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  color: #fff;
+  border-radius: 300px;
+  padding: 5px;
+  margin: 5px 15px 15px 5px;
+  color: beige;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
 }
 .crypto-card h5 {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 .crypto-info p {
@@ -77,7 +90,7 @@ export default {
 }
 .crypto-info button {
   margin-top: 10px;
-  padding: 10px 20px;
+  padding: 8px 16px;
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -86,5 +99,9 @@ export default {
 }
 .crypto-info button:hover {
   background-color: #0056b3;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
 }
 </style>

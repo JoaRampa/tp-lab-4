@@ -1,5 +1,5 @@
 <template>
-  <div class="events">
+  <div class="home">
     <LogIn v-if="!isAuthenticated" />
     <div v-else>
       <h1>Bienvenido, {{ userId }}!</h1>
@@ -10,9 +10,8 @@
 <script>
 import LogIn from "@/components/LoginForm.vue";
 import { mapGetters } from "vuex";
-
 export default {
-  name: "EvenList",
+  name: "HomeView",
   components: {
     LogIn,
   },
@@ -23,12 +22,10 @@ export default {
 </script>
 
 <style>
-.gargo {
-  background-color: rgb(10, 2, 28);
-}
-.events {
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: beige;
 }
 </style>
