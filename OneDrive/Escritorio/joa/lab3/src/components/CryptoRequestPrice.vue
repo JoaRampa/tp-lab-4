@@ -1,27 +1,22 @@
 <template>
-  <div
-    class="price-home container-fluid"
-    :class="{ disabled: !isAuthenticated }"
-  >
-    <div class="row">
-      <div
-        v-for="crypto in cryptoList"
-        :key="crypto.code"
-        class="crypto-card col-md-4 mb-3"
-      >
-        <div class="crypto-card">
-          <h5>{{ crypto.name }}</h5>
-          <div class="crypto-info">
-            <p v-if="crypto.price">
-              Compra: ${{ formatNumber(crypto.price.totalAsk) }}
-            </p>
-            <p v-if="crypto.price">
-              Venta: ${{ formatNumber(crypto.price.totalBid) }}
-            </p>
-            <button @click="handleBuy(crypto)">Comprar</button>
-            <button @click="handleSell(crypto)">Vender</button>
-          </div>
+  <div class="contain">
+    <div class="crypto mx-auto">
+      <div class="crypto-header">
+        <p>Moneda</p>
+        <p>Precio de la moneda</p>
+        <p>Operar</p>
+      </div>
+      <div v-for="crypto in cryptoList" :key="crypto.code" class="crypto-row">
+        <div>
+          <img
+            :src="require(`@/assets/${crypto.code}.png`)"
+            :alt="crypto.name"
+          />{{ crypto.name }}
         </div>
+        <div v-if="crypto.price" class="price">
+          ${{ formatNumber(crypto.price.totalAsk) }}
+        </div>
+        <a href="/">Operar</a>
       </div>
     </div>
   </div>
@@ -40,8 +35,8 @@ export default {
     ]),
     cryptoList() {
       return [
-        { code: "btc", name: "Bitcoin", price: this.getBTCPrice },
-        { code: "eth", name: "Ethereum", price: this.getETHPrice },
+        { code: "btc", name: "BTC", price: this.getBTCPrice },
+        { code: "eth", name: "ETH", price: this.getETHPrice },
         { code: "usdt", name: "USDt", price: this.getUSDTPrice },
       ];
     },
@@ -57,12 +52,6 @@ export default {
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
       return parts.join(",");
     },
-    handleBuy(crypto) {
-      console.log("Comprar", crypto);
-    },
-    handleSell(crypto) {
-      console.log("Vender", crypto);
-    },
   },
   created() {
     this.CryptoRequestPrice();
@@ -71,37 +60,41 @@ export default {
 </script>
 
 <style scoped>
-.crypto-card {
-  background-color: #1e3a4c;
-  border-radius: 300px;
-  padding: 5px;
-  margin: 5px 15px 15px 5px;
+.contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.crypto {
+  background-color: rgb(14, 15, 46);
+  width: 50%;
+  border: 1px solid #35314a;
+  border-radius: 15px;
+}
+
+.crypto-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  color: gray;
+}
+
+.crypto-row {
+  display: flex;
+  padding: 15px;
   color: beige;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 1 1 300px;
+  justify-content: space-between;
 }
-.crypto-card h5 {
-  font-size: 20px;
-  margin-bottom: 10px;
+
+p:hover {
+  color: beige;
 }
-.crypto-info p {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-.crypto-info button {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.crypto-info button:hover {
-  background-color: #0056b3;
-}
-.disabled {
-  pointer-events: none;
-  opacity: 0.6;
+
+img {
+  padding: 5px;
+  width: 35px;
+  height: 30x;
 }
 </style>
