@@ -23,7 +23,7 @@
             placeholder="Ingrese UserID"
           />
         </div>
-        <button type="submit" id="submit-id"><b>Siguiente</b></button>
+        <button type="submit" id="submit-id">Siguiente</button>
       </form>
     </div>
   </div>
@@ -70,15 +70,11 @@ export default {
   border-radius: 25px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 28px;
-  width: 400px;
+  width: 35%;
   color: beige;
 }
 
 h4 {
-  background: -webkit-linear-gradient(rgb(71, 8, 71), #0f5b9a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   font-size: 40px;
   font-weight: bold;
 }
