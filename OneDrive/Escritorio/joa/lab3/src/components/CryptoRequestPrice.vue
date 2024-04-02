@@ -95,6 +95,5 @@ p:hover {
 img {
   padding: 5px;
   width: 35px;
-  height: 30x;
 }
 </style>

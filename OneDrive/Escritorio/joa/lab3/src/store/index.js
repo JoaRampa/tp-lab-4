@@ -1,6 +1,7 @@
 import { createStore } from "vuex";
 import criptos from "./criptos.js";
 import VuexPersistence from "vuex-persist";
+import router from "../router";
 
 export default createStore({
   state: {
@@ -15,6 +16,11 @@ export default createStore({
     submitUser(state, userId) {
       state.userId = userId;
       state.isAuthenticated = true;
+    },
+    logout(state) {
+      state.isAuthenticated = false;
+      state.userId = null;
+      router.push("/");
     },
   },
   actions: {
