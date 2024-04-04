@@ -1,5 +1,6 @@
 import { createStore } from "vuex";
 import criptos from "./criptos.js";
+import transactions from "./transactions.js";
 import VuexPersistence from "vuex-persist";
 import router from "../router";
 
@@ -34,6 +35,7 @@ export default createStore({
   },
   modules: {
     criptos,
+    transactions,
   },
   plugins: [
     new VuexPersistence({

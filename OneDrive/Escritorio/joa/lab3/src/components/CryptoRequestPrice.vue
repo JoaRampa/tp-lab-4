@@ -7,7 +7,7 @@
         <p>Operar</p>
       </div>
       <div v-for="crypto in cryptoList" :key="crypto.code" class="crypto-row">
-        <div>
+        <div class="coin">
           <img
             :src="require(`@/assets/${crypto.code}.png`)"
             :alt="crypto.name"
@@ -16,7 +16,7 @@
         <div v-if="crypto.price" class="price">
           ${{ formatNumber(crypto.price.totalAsk) }}
         </div>
-        <a href="/">Operar</a>
+        <a href="/pucharse">Operar</a>
       </div>
     </div>
   </div>
@@ -86,6 +86,7 @@ export default {
   padding: 15px;
   color: beige;
   justify-content: space-between;
+  align-items: center;
 }
 
 p:hover {
@@ -95,5 +96,14 @@ p:hover {
 img {
   padding: 5px;
   width: 35px;
+}
+
+.coin {
+  display: flex;
+  align-items: center;
+}
+
+.crypto-row:hover {
+  background-color: #181945;
 }
 </style>

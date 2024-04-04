@@ -4,7 +4,7 @@
       <div class="brand">
         <img src="@/assets/logo.png" alt="Logo" width="35" />
         <b>CRYPCREATE</b>
-        <router-link :to="{ name: 'viewPucharse' }">Compra</router-link>
+        <router-link :to="{ name: 'viewPucharse' }">Comprar</router-link>
       </div>
       <div
         class="user-menu"
@@ -15,7 +15,7 @@
           src="@/assets/user.png"
           alt="User"
           width="35"
-          v-bind:class="{ hovered: showMenu }"
+          :class="{ hovered: showMenu }"
         />
         <div v-show="showMenu" class="menu">
           <div class="user-info">
@@ -24,7 +24,7 @@
           </div>
           <div class="options-menu">
             <div class="option wallet">
-              <a href="/">
+              <a href="/wallet">
                 <img
                   src="@/assets/wallet.png"
                   alt="wallet"

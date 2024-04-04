@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import LogOut from "../views/LogOut.vue";
 import PucharseView from "../views/ViewPucharse.vue";
+import WalletView from "@/views/WalletView.vue";
 import store from "@/store";
 
 const routes = [
@@ -12,16 +12,16 @@ const routes = [
     meta: { requiereGuest: true },
   },
   {
-    path: "/logOut",
-    name: "LogOut",
-    component: LogOut,
-    meta: { requiresAuth: true },
-  },
-  {
     path: "/pucharse",
     name: "viewPucharse",
     component: PucharseView,
     meta: { requiresAuth: true },
+  },
+  {
+    path: "/wallet",
+    name: "WalletView",
+    component: WalletView,
+    meta: { requiereAuth: true },
   },
 ];
 

@@ -32,15 +32,15 @@ const mutations = {
 };
 
 const actions = {
-  async newTransaction({ commit }, transactionData) {
+  async createTransaction({ commit }, purchaseData) {
     try {
-      console.log("Transaction Data:", transactionData);
-      const response = await apiClient.post("", transactionData);
+      console.log("Transaction Data:", purchaseData);
+      const response = await apiClient.post("", purchaseData);
 
       commit("updateCryptoAmount", {
-        cryptoCode: transactionData.crypto_code,
-        amount: transactionData.crypto_amount,
-        action: transactionData.action,
+        cryptoCode: purchaseData.crypto_code,
+        amount: purchaseData.crypto_amount,
+        action: purchaseData.action,
       });
 
       return response.data;
