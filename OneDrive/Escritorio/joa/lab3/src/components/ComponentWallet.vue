@@ -1,22 +1,34 @@
 <template>
-  <div>
-    <h2>Billetera de {{ userId }}</h2>
-    <div class="row">
+  <div class="contain">
+    <div class="cryptos">
+      <div class="header">
+        <b style="font-size: 40px">{{ userId }}</b>
+      </div>
+      <div class="header">
+        <p>Coin</p>
+        <p>Amount</p>
+        <p>Cash in</p>
+      </div>
       <div v-if="Object.keys(getWallet).length === 0">
         <p>No hay elementos en la billetera.</p>
       </div>
       <div
         v-else
-        class="col"
         v-for="(amount, cryptoCode) in getWallet"
         :key="cryptoCode"
+        class="header"
       >
-        <b>{{ cryptoCode.toUpperCase() }}</b>
-        <p>{{ amount }}</p>
+        <div class="coin">
+          <img :src="require(`@/assets/${cryptoCode}.png`)" :alt="cryptoCode" />
+          {{ cryptoCode.toUpperCase() }}
+        </div>
+        <div class="amount">{{ amount }}</div>
+        <div>${{ calculateCash(amount, cryptoCode) }}</div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
 import { mapGetters, mapActions } from "vuex";
 
@@ -24,9 +36,21 @@ export default {
   computed: {
     ...mapGetters(["userId"]),
     ...mapGetters("transactions", ["getWallet"]),
+    ...mapGetters(["getBTCPrice", "getETHPrice", "getUSDTPrice"]),
   },
   methods: {
     ...mapActions("transactions", ["getState"]),
+    calculateCash(amount, cryptoCode) {
+      const code = cryptoCode.toUpperCase();
+      const cryptoGetter = `get${code}Price`;
+      const cryptoPrice = this[cryptoGetter];
+      if (cryptoPrice) {
+        return parseFloat(amount * cryptoPrice.totalBid);
+      } else {
+        console.error(`Getter ${cryptoGetter} no encontrado`);
+        return 0;
+      }
+    },
   },
   async created() {
     try {
@@ -37,3 +61,43 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.cryptos {
+  background-color: rgb(14, 15, 46);
+  width: 50%;
+  border: 1px solid #35314a;
+  border-radius: 15px;
+  color: beige;
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  text-align: left;
+}
+
+.header > * {
+  flex: 1;
+}
+
+img {
+  padding: 5px;
+  width: 35px;
+}
+
+.coin {
+  display: flex;
+  align-items: center;
+}
+</style>

@@ -1,22 +1,22 @@
 <template>
   <div class="contain">
-    <div class="crypto mx-auto">
-      <div class="crypto-header">
+    <div class="cryptos">
+      <div class="header">
         <p>Moneda</p>
         <p>Precio de la moneda</p>
         <p>Operar</p>
       </div>
-      <div v-for="crypto in cryptoList" :key="crypto.code" class="crypto-row">
+      <div v-for="crypto in cryptoList" :key="crypto.code" class="header">
         <div class="coin">
           <img
             :src="require(`@/assets/${crypto.code}.png`)"
             :alt="crypto.name"
           />{{ crypto.name }}
         </div>
-        <div v-if="crypto.price" class="price">
+        <div v-if="crypto.price" class="row price">
           ${{ formatNumber(crypto.price.totalAsk) }}
         </div>
-        <a href="/pucharse">Operar</a>
+        <a class="row trade" href="/pucharse">Operar</a>
       </div>
     </div>
   </div>
@@ -64,33 +64,24 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  margin-top: 15px;
 }
 
-.crypto {
+.cryptos {
   background-color: rgb(14, 15, 46);
   width: 50%;
   border: 1px solid #35314a;
   border-radius: 15px;
-}
-
-.crypto-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  color: gray;
-}
-
-.crypto-row {
-  display: flex;
-  padding: 15px;
   color: beige;
+  padding: 15px;
+}
+
+.header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-p:hover {
-  color: beige;
+  padding: 15px;
+  text-align: center;
 }
 
 img {
@@ -101,9 +92,5 @@ img {
 .coin {
   display: flex;
   align-items: center;
-}
-
-.crypto-row:hover {
-  background-color: #181945;
 }
 </style>

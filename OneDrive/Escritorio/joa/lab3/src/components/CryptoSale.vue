@@ -2,8 +2,8 @@
   <div class="transactions">
     <div class="purchase">
       <form id="dataP" @submit.prevent="savePurchaseData">
-        <div>
-          <select id="crypto" v-model="selectedCrypto" required>
+        <div class="crypto select">
+          <select id="crypto" class="inputs" v-model="selectedCrypto" required>
             <option
               v-for="crypto in cryptoList"
               :key="crypto.code"
@@ -12,24 +12,33 @@
               {{ crypto.name }}
             </option>
           </select>
-          <p v-if="selectedCrypto">{{ formatNumber(selectedCryptoPrice) }}</p>
+          <p v-if="selectedCrypto" style="margin-top: 15px">
+            {{ formatNumber(selectedCryptoPrice) }}
+          </p>
         </div>
-        <div>
-          <label for="amount">Cantidad {{ selectedCrypto }}</label>
+        <div class="crypto amount">
+          <label for="amount">Disponible {{ selectedCrypto }}</label>
           <input
             type="number"
             id="amount"
+            class="inputs"
             v-model.number="amount"
             @input="totalMoney"
             required
           />
         </div>
-        <div>
-          <label id="money">Total ${{ formatNumber(money) }}</label>
+        <div class="crypto money">
+          <label id="money">Disponible ${{ formatNumber(money) }}</label>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" class="submit-button">
+          Vender {{ selectedCrypto }}
+        </button>
       </form>
-      <button v-if="saveData" @click="newTransaction(purchaseData)">
+      <button
+        v-if="saveData"
+        @click="newTransaction(purchaseData)"
+        class="confirm-button"
+      >
         Confirmar
       </button>
     </div>
@@ -43,7 +52,7 @@ export default {
   data() {
     return {
       purchaseData: null,
-      selectedCrypto: null,
+      selectedCrypto: "btc",
       saveData: false,
       money: 0,
       amount: 0,
@@ -62,7 +71,7 @@ export default {
       const crypto = this.cryptoList.find(
         (crypto) => crypto.code === this.selectedCrypto
       );
-      return crypto ? `Precio: ${crypto.price.totalAsk}` : "";
+      return crypto ? `Precio: ${crypto.price.totalBid}` : "";
     },
   },
   methods: {
@@ -96,7 +105,7 @@ export default {
       if (this.amount < 0) {
         this.amount = 0;
       }
-      this.money = parseFloat((this.amount * crypto.price.totalAsk).toFixed(2));
+      this.money = parseFloat((this.amount * crypto.price.totalBid).toFixed(2));
     },
     formatNumber(number) {
       if (typeof number === "undefined") {
@@ -111,8 +120,51 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .transactions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: beige;
+}
+
+.purchase {
+  width: 365px;
+  background-color: rgb(14, 15, 46);
+  padding: 15px;
+  border: 1px solid #35314a;
+  border-radius: 15px;
+}
+
+.crypto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  height: 30px;
+}
+
+.submit-button,
+.confirm-button {
+  background-color: #af1b1b;
+  color: beige;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover,
+.confirm-button:hover {
+  background-color: rgb(103, 15, 15);
+}
+
+.inputs {
+  background-color: rgb(14, 15, 46);
+  border: 1px solid #35314a;
+  color: beige;
+  border-radius: 5px;
+  width: 70px;
 }
 </style>

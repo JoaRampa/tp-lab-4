@@ -4,7 +4,10 @@
       <div class="brand">
         <img src="@/assets/logo.png" alt="Logo" width="35" />
         <b>CRYPCREATE</b>
-        <router-link :to="{ name: 'viewPucharse' }">Comprar</router-link>
+        <router-link :to="{ name: 'Home' }">Inicio </router-link>
+        <router-link :to="{ name: 'viewPucharse' }" style="margin-left: 18px">
+          Tradear</router-link
+        >
       </div>
       <div
         class="user-menu"
@@ -83,6 +86,11 @@ export default {
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: rgb(14, 15, 46);
+  min-height: 100vh;
 }
 
 nav {
@@ -98,13 +106,6 @@ nav a {
   font-weight: bold;
   font-size: 15px;
   color: BEIGE;
-}
-
-body {
-  background-image: url("@/assets/fondo.jpg");
-  background: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .brand {

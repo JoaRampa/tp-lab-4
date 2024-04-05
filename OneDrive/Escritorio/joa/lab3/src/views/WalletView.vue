@@ -1,5 +1,5 @@
 <template>
-  <h1 style="color: beige">WALLET</h1>
+  <h1 style="color: beige">My Assets</h1>
   <ComponentWallet />
 </template>
 <script>
