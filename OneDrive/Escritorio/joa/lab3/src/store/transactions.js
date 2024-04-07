@@ -76,6 +76,16 @@ const actions = {
       console.error("Error al devolver el estado de la cuenta:", error);
     }
   },
+  async getHistory(_, userId) {
+    try {
+      const response = await apiClient.get(
+        `${API_BASE_URL}?q={"user_id":"${userId}"}`
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error al devolver el historial:", error);
+    }
+  },
 };
 
 export default {

@@ -38,7 +38,7 @@
               </a>
             </div>
             <div class="option historial">
-              <a href="/">
+              <a href="/history">
                 <img
                   src="@/assets/history.png"
                   alt="historial"

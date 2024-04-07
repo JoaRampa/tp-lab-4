@@ -1,11 +1,12 @@
 <template>
   <div class="contain">
     <div class="cryptos">
-      <div class="header">
+      <div class="contain">
+        <img src="@/assets/logo.png" style="width: 50px" />
         <b style="font-size: 40px">{{ userId }}</b>
       </div>
-      <div class="header">
-        <p>Coin</p>
+      <div class="header p">
+        <p><img src="@/assets/b.png" />Coins</p>
         <p>Amount</p>
         <p>Cash in</p>
       </div>
@@ -67,7 +68,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
 }
 
 .cryptos {
@@ -89,6 +89,18 @@ export default {
 
 .header > * {
   flex: 1;
+}
+
+.header p {
+  background-color: #35314a;
+  padding: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.header p image {
+  width: 35px;
 }
 
 img {

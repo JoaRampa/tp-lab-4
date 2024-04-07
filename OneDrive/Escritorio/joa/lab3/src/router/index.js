@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import PucharseView from "../views/ViewPucharse.vue";
 import WalletView from "@/views/WalletView.vue";
+import HistoryView from "@/views/ViewHistory.vue";
 import store from "@/store";
 
 const routes = [
@@ -21,6 +22,12 @@ const routes = [
     path: "/wallet",
     name: "WalletView",
     component: WalletView,
+    meta: { requiereAuth: true },
+  },
+  {
+    path: "/history",
+    name: "HistoryView",
+    component: HistoryView,
     meta: { requiereAuth: true },
   },
 ];

@@ -1,5 +1,9 @@
 <template>
-  <h1 style="color: beige">My Assets</h1>
+  <div class="title">
+    <b style="font-size: 30px; margin-bottom: 25px">
+      <img src="@/assets/mywallet.png" alt="Logo" width="45" />Billetera de
+    </b>
+  </div>
   <ComponentWallet />
 </template>
 <script>
@@ -11,3 +15,11 @@ export default {
   },
 };
 </script>
+
+<style>
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
