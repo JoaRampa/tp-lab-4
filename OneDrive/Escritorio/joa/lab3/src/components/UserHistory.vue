@@ -2,28 +2,34 @@
   <div class="history-page">
     <h1>Historial de transacciones de {{ userId }}</h1>
     <div class="container-xs">
-      <ul v-if="transactions.length > 0">
-        <li
-          v-for="(transaction, index) in transactions"
-          :key="transaction.datetime"
+      <div
+        class="transaction"
+        v-for="(transaction, index) in transactions"
+        :key="transaction.datetime"
+      >
+        <button @click="showMenu = true" class="transaction">
+          <p>Transacción {{ transactions.length - index }}</p>
+        </button>
+
+        <div
+          v-show="showMenu"
+          class="transaction"
+          v-if="transactions.length > 0"
         >
-          <div class="transaction">
-            <p>Transacción {{ transactions.length - index }}</p>
-            <div
-              class="transaction-box"
-              :class="{ purchase: transaction.action === 'purchase' }"
-            >
-              <p>Tipo de cripto: {{ transaction.crypto_code }}</p>
-              <p>Acción realizada: {{ transaction.action }}</p>
-            </div>
+          <div
+            class="transaction-box"
+            :class="{ purchase: transaction.action === 'purchase' }"
+          >
+            <p>Tipo: {{ transaction.crypto_code }}</p>
+            <p>Acción: {{ transaction.action }}</p>
           </div>
-          <p>Cantidad de cripto: {{ transaction.crypto_amount }}</p>
-          <p>Dinero en pesos: {{ transaction.money }}</p>
-          <p>Id de la transacción: {{ transaction._id }}</p>
+          <p>Cantidad: {{ transaction.crypto_amount }}</p>
+          <p>Pesos ${{ transaction.money }}</p>
+          <p>Id: {{ transaction._id }}</p>
           <p>Fecha: {{ transaction.datetime }}</p>
-        </li>
-      </ul>
-      <h3 v-else>Historial vacío</h3>
+        </div>
+        <h3 v-else>Historial vacío</h3>
+      </div>
     </div>
   </div>
 </template>
@@ -35,6 +41,7 @@ export default {
   data() {
     return {
       transactions: [],
+      showMenu: false,
     };
   },
 
@@ -56,4 +63,17 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.container-xs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.transaction {
+  background-color: rgb(14, 15, 46);
+  border: 1px solid #35314a;
+  border-radius: 5px;
+  flex: 0 0 20%;
+  box-sizing: border-box;
+}
+</style>

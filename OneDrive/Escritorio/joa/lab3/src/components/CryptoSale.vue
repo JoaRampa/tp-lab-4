@@ -1,7 +1,7 @@
 <template>
   <div class="transactions">
     <div class="purchase">
-      <form id="dataP" @submit.prevent="savePurchaseData">
+      <form id="dataP" @submit.prevent="saveTransactionData">
         <div class="crypto select">
           <select id="crypto" class="inputs" v-model="selectedCrypto" required>
             <option
@@ -16,27 +16,32 @@
             {{ formatNumber(selectedCryptoPrice) }}
           </p>
         </div>
-        <div class="crypto amount">
-          <label for="amount">Disponible {{ selectedCrypto }}</label>
+        <div class="crypto amount" >
+          <label for="amount" >Disponible: {{ getWallet[selectedCrypto] }}</label>
           <input
             type="number"
             id="amount"
             class="inputs"
-            v-model.number="amount"
+            v-model="amount"
             @input="totalMoney"
             required
           />
         </div>
         <div class="crypto money">
-          <label id="money">Disponible ${{ formatNumber(money) }}</label>
+          <label id="money">Total ${{ formatNumber(money) }}</label>
         </div>
         <button type="submit" class="submit-button">
-          Vender {{ selectedCrypto }}
+          Vender
+          <img
+            :src="require(`@/assets/${selectedCrypto}.png`)"
+            :alt="selectedCrypto"
+            width="25"
+          />
         </button>
       </form>
       <button
         v-if="saveData"
-        @click="newTransaction(purchaseData)"
+        @click="newTransaction(transactionData)"
         class="confirm-button"
       >
         Confirmar
@@ -51,15 +56,18 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   data() {
     return {
-      purchaseData: null,
+      transactionData: null,
       selectedCrypto: "btc",
       saveData: false,
       money: 0,
       amount: 0,
+      userWallet: {},
+      saleAmount: 0,
     };
   },
   computed: {
     ...mapGetters(["userId", "getBTCPrice", "getETHPrice", "getUSDTPrice"]),
+    ...mapGetters("transactions", ["getWallet"]),
     cryptoList() {
       return [
         { code: "btc", name: "BTC", price: this.getBTCPrice },
@@ -71,32 +79,46 @@ export default {
       const crypto = this.cryptoList.find(
         (crypto) => crypto.code === this.selectedCrypto
       );
-      return crypto ? `Precio: ${crypto.price.totalBid}` : "";
+      return crypto ? `Venta: $${crypto.price.totalBid}` : "";
     },
   },
   methods: {
-    ...mapActions("transactions", ["createTransaction"]),
-    savePurchaseData() {
-      if (this.money > 0 && this.amount > 0) {
-        this.purchaseData = {
-          user_id: this.userId,
-          action: "purchase",
-          crypto_code: this.selectedCrypto,
-          crypto_amount: this.amount,
-          money: this.money,
-          datetime: new Date(),
-        };
-        this.saveData = true;
+    ...mapActions("transactions", ["createTransaction", "getState"]),
+    saveTransactionData() {
+      if (this.amount > 0) {
+        if (this.saleAmount >= this.amount) {
+          this.transactionData = {
+            user_id: this.userId,
+            action: "sale",
+            crypto_code: this.selectedCrypto,
+            crypto_amount: this.amount,
+            money: this.money,
+            datetime: new Date(),
+          };
+          this.saveData = true;
+        } else {
+          alert("Insuficiente");
+        }
       }
     },
-    async newTransaction(purchaseData) {
+    async newTransaction(transactionData) {
       try {
-        await this.createTransaction(purchaseData);
+        await this.createTransaction(transactionData);
+        this.getState();
         this.money = 0;
         this.amount = 0;
       } catch (error) {
         console.error("Error al realizar la nueva transacción:", error);
       }
+    },
+    getSaleAmount(selectedCrypto) {
+      if (!this.getWallet) {
+        this.getState();
+      }
+
+      const wallet = this.getWallet || {};
+      const cryptoCode = selectedCrypto.toLowerCase();
+      this.saleAmount = wallet[cryptoCode] || 0;
     },
     totalMoney() {
       const crypto = this.cryptoList.find(
@@ -105,6 +127,7 @@ export default {
       if (this.amount < 0) {
         this.amount = 0;
       }
+      this.getSaleAmount(this.selectedCrypto);
       this.money = parseFloat((this.amount * crypto.price.totalBid).toFixed(2));
     },
     formatNumber(number) {
@@ -116,6 +139,13 @@ export default {
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
       return parts.join(",");
     },
+    async created() {
+    try {
+      await this.getState(this.userId);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  },
   },
 };
 </script>

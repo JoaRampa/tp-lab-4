@@ -1,7 +1,7 @@
 <template>
   <div class="transactions">
     <div class="purchase">
-      <form id="dataP" @submit.prevent="savePurchaseData">
+      <form id="dataP" @submit.prevent="saveTransactionData">
         <div class="crypto select">
           <select id="crypto" class="inputs" v-model="selectedCrypto" required>
             <option
@@ -17,12 +17,12 @@
           </p>
         </div>
         <div class="crypto amount">
-          <label for="amount">Cantidad {{ selectedCrypto }}</label>
+          <label for="amount">Cantidad de -{{ selectedCrypto.toLocaleUpperCase() }}</label>
           <input
             type="number"
             id="amount"
             class="inputs"
-            v-model.number="amount"
+            v-model="amount"
             @input="totalMoney"
             required
           />
@@ -31,7 +31,12 @@
           <label id="money">Total ${{ formatNumber(money) }}</label>
         </div>
         <button type="submit" class="submit-button">
-          Comprar {{ selectedCrypto }}
+          Comprar
+          <img
+            :src="require(`@/assets/${selectedCrypto}.png`)"
+            :alt="selectedCrypto"
+            width="25"
+          />
         </button>
       </form>
       <button
@@ -71,12 +76,12 @@ export default {
       const crypto = this.cryptoList.find(
         (crypto) => crypto.code === this.selectedCrypto
       );
-      return crypto ? `Precio: ${crypto.price.totalAsk}` : "";
+      return crypto ? `Compra: $${crypto.price.totalAsk}` : "";
     },
   },
   methods: {
     ...mapActions("transactions", ["createTransaction"]),
-    savePurchaseData() {
+    saveTransactionData() {
       if (this.money > 0 && this.amount > 0) {
         this.purchaseData = {
           user_id: this.userId,
