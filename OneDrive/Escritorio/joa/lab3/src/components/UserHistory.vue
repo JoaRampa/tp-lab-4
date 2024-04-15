@@ -8,7 +8,7 @@
         :key="transaction.datetime"
       >
         <button @click="showMenu = true" class="transaction">
-          <p>Transacción {{ transactions.length - index }}</p>
+          <p>Transacción {{ index + 1 }}</p>
         </button>
 
         <div

@@ -17,7 +17,9 @@
           </p>
         </div>
         <div class="crypto amount">
-          <label for="amount">Cantidad de -{{ selectedCrypto.toLocaleUpperCase() }}</label>
+          <label for="amount"
+            >Cantidad de -{{ selectedCrypto.toLocaleUpperCase() }}</label
+          >
           <input
             type="number"
             id="amount"

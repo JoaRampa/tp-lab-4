@@ -69,6 +69,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 export default {
   data() {

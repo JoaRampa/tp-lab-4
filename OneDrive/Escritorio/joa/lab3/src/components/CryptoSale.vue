@@ -1,7 +1,7 @@
 <template>
   <div class="transactions">
     <div class="purchase">
-      <form id="dataP" @submit.prevent="saveTransactionData">
+      <form @submit.prevent="saveTransactionData">
         <div class="crypto select">
           <select id="crypto" class="inputs" v-model="selectedCrypto" required>
             <option
@@ -16,8 +16,10 @@
             {{ formatNumber(selectedCryptoPrice) }}
           </p>
         </div>
-        <div class="crypto amount" >
-          <label for="amount" >Disponible: {{ getWallet[selectedCrypto] }}</label>
+        <div class="crypto amount">
+          <label for="amount"
+            >Disponible: {{ getWallet[selectedCrypto] }}</label
+          >
           <input
             type="number"
             id="amount"
@@ -30,22 +32,61 @@
         <div class="crypto money">
           <label id="money">Total ${{ formatNumber(money) }}</label>
         </div>
-        <button type="submit" class="submit-button">
-          Vender
-          <img
-            :src="require(`@/assets/${selectedCrypto}.png`)"
-            :alt="selectedCrypto"
-            width="25"
-          />
-        </button>
+        <div class="btn-save">
+          <div class="sale">
+            <button
+              class="btn btn-outline-light"
+              type="submit"
+              :disabled="amount === 0 || saleAmount < amount"
+              data-bs-target="#confirmSale"
+              data-bs-toggle="modal"
+            >
+              Vender
+              <img
+                :src="require(`@/assets/${selectedCrypto}.png`)"
+                :alt="selectedCrypto"
+                width="25"
+              />
+            </button>
+          </div>
+
+          <div class="modal" id="confirmSale">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Confirmar Venta</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>¿Seguro que quiere vender las criptomonedas?</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cerrar
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal"
+                    @click="newTransaction(transactionData)"
+                  >
+                    Confirmar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
-      <button
-        v-if="saveData"
-        @click="newTransaction(transactionData)"
-        class="confirm-button"
-      >
-        Confirmar
-      </button>
     </div>
   </div>
 </template>
@@ -56,13 +97,12 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   data() {
     return {
-      transactionData: null,
       selectedCrypto: "btc",
-      saveData: false,
       money: 0,
       amount: 0,
       userWallet: {},
       saleAmount: 0,
+      transactionData: null,
     };
   },
   computed: {
@@ -95,7 +135,9 @@ export default {
             money: this.money,
             datetime: new Date(),
           };
-          this.saveData = true;
+          if (this.myModal) {
+            this.myModal.show();
+          }
         } else {
           alert("Insuficiente");
         }
@@ -139,13 +181,6 @@ export default {
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
       return parts.join(",");
     },
-    async created() {
-    try {
-      await this.getState(this.userId);
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  },
   },
 };
 </script>
@@ -160,7 +195,6 @@ export default {
 
 .purchase {
   width: 365px;
-  background-color: rgb(14, 15, 46);
   padding: 15px;
   border: 1px solid #35314a;
   border-radius: 15px;
@@ -174,8 +208,7 @@ export default {
   height: 30px;
 }
 
-.submit-button,
-.confirm-button {
+.sale button {
   background-color: #af1b1b;
   color: beige;
   border: none;
@@ -185,8 +218,7 @@ export default {
   transition: background-color 0.3s;
 }
 
-.submit-button:hover,
-.confirm-button:hover {
+.sale button:hover {
   background-color: rgb(103, 15, 15);
 }
 
@@ -196,5 +228,9 @@ export default {
   color: beige;
   border-radius: 5px;
   width: 70px;
+}
+
+.modal-content {
+  color: black;
 }
 </style>

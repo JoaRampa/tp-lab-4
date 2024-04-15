@@ -52,13 +52,21 @@ export default {
         return 0;
       }
     },
-  },
-  async created() {
+    async fetchData() {
     try {
       await this.getState(this.userId);
     } catch (error) {
       console.error("Error:", error);
     }
+  },
+  },
+  async created() {
+    await this.fetchData();
+
+    // Actualiza los datos
+    setInterval(async () => {
+      await this.fetchData();
+    }, 1000);
   },
 };
 </script>
