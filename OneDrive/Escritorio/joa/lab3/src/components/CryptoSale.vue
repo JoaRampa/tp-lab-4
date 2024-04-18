@@ -135,9 +135,6 @@ export default {
             money: this.money,
             datetime: new Date(),
           };
-          if (this.myModal) {
-            this.myModal.show();
-          }
         } else {
           alert("Insuficiente");
         }

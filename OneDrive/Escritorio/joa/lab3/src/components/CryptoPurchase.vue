@@ -32,22 +32,61 @@
         <div class="crypto money">
           <label id="money">Total ${{ formatNumber(money) }}</label>
         </div>
-        <button type="submit" class="submit-button">
-          Comprar
-          <img
-            :src="require(`@/assets/${selectedCrypto}.png`)"
-            :alt="selectedCrypto"
-            width="25"
-          />
-        </button>
+        <div class="btn-save">
+          <div class="divPurchase">
+            <button
+              class="btn btn-outline-light"
+              type="submit"
+              :disabled="amount === 0"
+              data-bs-target="#confirmPurchase"
+              data-bs-toggle="modal"
+            >
+              Comprar
+              <img
+                :src="require(`@/assets/${selectedCrypto}.png`)"
+                :alt="selectedCrypto"
+                width="25"
+              />
+            </button>
+          </div>
+
+          <div class="modal" id="confirmPurchase">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Confirmar Compra</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>¿Quiere confirmar la compra?</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cerrar
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal"
+                    @click="newTransaction(transactionData)"
+                  >
+                    Confirmar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
-      <button
-        v-if="saveData"
-        @click="newTransaction(purchaseData)"
-        class="confirm-button"
-      >
-        Confirmar
-      </button>
     </div>
   </div>
 </template>
@@ -58,7 +97,7 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   data() {
     return {
-      purchaseData: null,
+      transactionData: null,
       selectedCrypto: "btc",
       saveData: false,
       money: 0,
@@ -85,7 +124,7 @@ export default {
     ...mapActions("transactions", ["createTransaction"]),
     saveTransactionData() {
       if (this.money > 0 && this.amount > 0) {
-        this.purchaseData = {
+        this.transactionData = {
           user_id: this.userId,
           action: "purchase",
           crypto_code: this.selectedCrypto,
@@ -96,9 +135,9 @@ export default {
         this.saveData = true;
       }
     },
-    async newTransaction(purchaseData) {
+    async newTransaction(transactionData) {
       try {
-        await this.createTransaction(purchaseData);
+        await this.createTransaction(transactionData);
         this.money = 0;
         this.amount = 0;
       } catch (error) {
@@ -151,8 +190,7 @@ export default {
   height: 30px;
 }
 
-.submit-button,
-.confirm-button {
+.divPurchase button {
   background-color: #10ac4c;
   color: beige;
   border: none;
@@ -162,8 +200,7 @@ export default {
   transition: background-color 0.3s;
 }
 
-.submit-button:hover,
-.confirm-button:hover {
+.divPurchase button:hover {
   background-color: rgb(11, 118, 45);
 }
 

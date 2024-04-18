@@ -52,9 +52,21 @@ export default {
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
       return parts.join(",");
     },
+    async fetchData() {
+      try {
+        await this.CryptoRequestPrice();
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    },
   },
-  created() {
-    this.CryptoRequestPrice();
+  async created() {
+    await this.fetchData();
+
+    // Actualiza los datos
+    setInterval(async () => {
+      await this.fetchData();
+    }, 1000);
   },
 };
 </script>

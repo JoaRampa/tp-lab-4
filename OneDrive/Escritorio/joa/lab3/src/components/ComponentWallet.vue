@@ -53,12 +53,12 @@ export default {
       }
     },
     async fetchData() {
-    try {
-      await this.getState(this.userId);
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  },
+      try {
+        await this.getState(this.userId);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    },
   },
   async created() {
     await this.fetchData();

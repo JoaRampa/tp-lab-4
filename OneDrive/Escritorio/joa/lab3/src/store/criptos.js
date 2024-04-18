@@ -27,7 +27,7 @@ const actions = {
     try {
       for (const criptoRequest in state.criptos) {
         const criptoResponse = await axios.get(
-          `https://criptoya.com/api/astropay/${criptoRequest}/ars/1`
+          `https://criptoya.com/api/argenbtc/${criptoRequest}/ars/1`
         );
         commit("criptoPrice", { criptoRequest, data: criptoResponse.data });
       }
