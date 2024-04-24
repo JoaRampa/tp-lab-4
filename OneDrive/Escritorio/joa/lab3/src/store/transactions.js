@@ -86,6 +86,22 @@ const actions = {
       console.error("Error al devolver el historial:", error);
     }
   },
+
+  async deleteTransaction({ commit }, transactionId) {
+    try {
+      const response = await apiClient.delete(
+        `${API_BASE_URL}/${transactionId}`
+      );
+      const { crypto_code, crypto_amount, action } = response.data;
+      commit("updateCryptoAmount", {
+        cryptoCode: crypto_code,
+        amount: crypto_amount,
+        action: action === "purchase" ? "sale" : "purchase",
+      });
+    } catch (error) {
+      console.error("Error al eliminar la transacción:", error);
+    }
+  },
 };
 
 export default {

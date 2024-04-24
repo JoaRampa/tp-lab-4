@@ -21,11 +21,14 @@
             >Cantidad de -{{ selectedCrypto.toLocaleUpperCase() }}</label
           >
           <input
-            type="number"
+            type="text"
             id="amount"
             class="inputs"
             v-model="amount"
-            @input="totalMoney"
+            @input="
+              totalMoney();
+              validateInput();
+            "
             required
           />
         </div>
@@ -102,6 +105,7 @@ export default {
       saveData: false,
       money: 0,
       amount: 0,
+      decimalPart: true,
     };
   },
   computed: {
@@ -162,6 +166,14 @@ export default {
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
       return parts.join(",");
     },
+    validateInput() {
+      const regex = /^\d+(\.\d{0,6})?$/;
+      if (!regex.test(this.amount)) {
+        this.decimalPart = false;
+      } else {
+        this.decimalPart = true;
+      }
+    },
   },
 };
 </script>
@@ -210,5 +222,9 @@ export default {
   color: beige;
   border-radius: 5px;
   width: 70px;
+}
+
+.modal-content {
+  color: black;
 }
 </style>

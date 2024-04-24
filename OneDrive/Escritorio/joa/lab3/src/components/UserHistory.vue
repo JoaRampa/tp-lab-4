@@ -1,34 +1,72 @@
 <template>
   <div class="history-page">
-    <h1>Historial de transacciones de {{ userId }}</h1>
+    <h1>
+      Historial de transacciones de <b style="font-size: 35px">{{ userId }}</b>
+    </h1>
     <div class="container-xs">
       <div
         class="transaction"
         v-for="(transaction, index) in transactions"
         :key="transaction.datetime"
       >
-        <button @click="showMenu = true" class="transaction">
-          <p>Transacción {{ index + 1 }}</p>
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          <p>Transacción {{ index + 1 }} {{ transaction.crypto_code }}</p>
         </button>
 
-        <div
-          v-show="showMenu"
-          class="transaction"
-          v-if="transactions.length > 0"
-        >
+        <div class="collapse" id="collapseExample">
           <div
             class="transaction-box"
             :class="{ purchase: transaction.action === 'purchase' }"
           >
-            <p>Tipo: {{ transaction.crypto_code }}</p>
             <p>Acción: {{ transaction.action }}</p>
           </div>
           <p>Cantidad: {{ transaction.crypto_amount }}</p>
           <p>Pesos ${{ transaction.money }}</p>
           <p>Id: {{ transaction._id }}</p>
           <p>Fecha: {{ transaction.datetime }}</p>
+          <button
+            @click="saveTransactionId(transaction._id)"
+            class="btn btn-danger"
+            data-bs-toggle="modal"
+            data-bs-target="#confirmDelete"
+          >
+            Eliminar Nº{{ index + 1 }}
+          </button>
         </div>
-        <h3 v-else>Historial vacío</h3>
+      </div>
+      <div class="modal" id="confirmDelete">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Eliminar transacción</h5>
+              <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+              <h6>Confirme que está seguro de eliminar esta transacción.</h6>
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">
+                Cancelar
+              </button>
+              <button
+                @click="deleteTransactionLocal(deleteTransactionId)"
+                data-bs-dismiss="modal"
+                class="btn btn-danger"
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -42,6 +80,7 @@ export default {
     return {
       transactions: [],
       showMenu: false,
+      deleteTransactionId: null,
     };
   },
 
@@ -58,12 +97,41 @@ export default {
   },
 
   methods: {
-    ...mapActions("transactions", ["getHistory"]),
+    ...mapActions("transactions", ["getHistory", "deleteTransaction"]),
+    async deleteTransactionLocal(transactionId) {
+      try {
+        await this.deleteTransaction(transactionId);
+
+        this.transactions = this.transactions.filter(
+          (transaction) => transaction._id !== transactionId
+        );
+        this.updateHistory();
+      } catch (error) {
+        console.error("Error al eliminar la transacción:", error);
+      }
+    },
+    async updateHistory() {
+      try {
+        const response = await this.getHistory(this.userId);
+        console.log(response);
+        this.transactions = response.sort(
+          (a, b) => new Date(b.datetime) - new Date(a.datetime)
+        );
+      } catch (error) {
+        console.error("Error al obtener el historial:", error);
+      }
+    },
+    saveTransactionId(transactionId) {
+      this.deleteTransactionId = transactionId;
+    },
   },
 };
 </script>
 
 <style>
+.history-page {
+  color: beige;
+}
 .container-xs {
   display: flex;
   flex-wrap: wrap;
