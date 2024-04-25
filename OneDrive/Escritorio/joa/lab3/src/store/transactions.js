@@ -102,6 +102,27 @@ const actions = {
       console.error("Error al eliminar la transacción:", error);
     }
   },
+  async editTransaction({ commit }, { transactionId, newValues }) {
+    try {
+      const response = await apiClient.patch(
+        `${API_BASE_URL}/${transactionId}`,
+        newValues
+      );
+      const { crypto_code, crypto_amount, money, action } = response.data;
+
+      const newAmount = action === "purchase" ? -crypto_amount : crypto_amount;
+      const newMoney = action === "purchase" ? -money : money;
+
+      commit("updateCryptoAmount", {
+        cryptoCode: crypto_code,
+        amount: newAmount,
+        money: newMoney,
+        action,
+      });
+    } catch (error) {
+      console.error("Error al editar la transacción:", error);
+    }
+  },
 };
 
 export default {

@@ -33,6 +33,14 @@
           <p>Fecha: {{ transaction.datetime }}</p>
           <button
             @click="saveTransactionId(transaction._id)"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#confirmEdit"
+          >
+            Editar Nº{{ index + 1 }}
+          </button>
+          <button
+            @click="saveTransactionId(transaction._id)"
             class="btn btn-danger"
             data-bs-toggle="modal"
             data-bs-target="#confirmDelete"
@@ -68,6 +76,54 @@
           </div>
         </div>
       </div>
+      <!-- -->
+      <div class="modal" id="confirmEdit">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Editar transacción</h5>
+              <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+              <h6>Ingrese el nuevo monto de cripto:</h6>
+              <input
+                class="input"
+                type="number"
+                id="crypto_amount"
+                v-model="crypto_amount"
+                min="0"
+                step="0.01"
+              />
+
+              <h6>Ingrese el nuevo monto de ARS:</h6>
+              <input
+                class="input"
+                type="number"
+                id="money"
+                v-model="money"
+                min="0"
+                step="0.01"
+              />
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">
+                Cancelar
+              </button>
+              <button
+                @click="
+                  editTransactionLocal(editTransactionId, crypto_amount, money)
+                "
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Editar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -81,6 +137,9 @@ export default {
       transactions: [],
       showMenu: false,
       deleteTransactionId: null,
+      editTransactionId: null,
+      crypto_amount: 0,
+      money: 0,
     };
   },
 
@@ -121,8 +180,36 @@ export default {
         console.error("Error al obtener el historial:", error);
       }
     },
+    async editTransactionLocal(transactionId, crypto_amount, money) {
+      try {
+        const newValues = {};
+
+        if (crypto_amount > 0) {
+          newValues.crypto_amount = crypto_amount;
+        }
+
+        if (money > 0) {
+          newValues.money = money;
+        }
+
+        if (Object.keys(newValues).length > 0) {
+          await this.$store.dispatch("transactions/editTransaction", {
+            transactionId,
+            newValues,
+          });
+          this.updateHistory();
+        } else {
+          console.log(
+            "No se realizaron cambios ya que los valores no son mayores a 0."
+          );
+        }
+      } catch (error) {
+        console.error("Error al editar la transacción:", error);
+      }
+    },
     saveTransactionId(transactionId) {
       this.deleteTransactionId = transactionId;
+      this.editTransactionId = transactionId;
     },
   },
 };
