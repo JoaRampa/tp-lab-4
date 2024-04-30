@@ -17,7 +17,7 @@
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          <p>Transacción {{ index + 1 }} {{ transaction.crypto_code }}</p>
+          <p>Transacción {{ index + 1 }} {{ transaction.crypto_code }} ▼</p>
         </button>
 
         <div class="collapse" id="collapseExample">
@@ -31,22 +31,24 @@
           <p>Pesos ${{ transaction.money }}</p>
           <p>Id: {{ transaction._id }}</p>
           <p>Fecha: {{ transaction.datetime }}</p>
-          <button
-            @click="saveTransactionId(transaction._id)"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#confirmEdit"
-          >
-            Editar Nº{{ index + 1 }}
-          </button>
-          <button
-            @click="saveTransactionId(transaction._id)"
-            class="btn btn-danger"
-            data-bs-toggle="modal"
-            data-bs-target="#confirmDelete"
-          >
-            Eliminar Nº{{ index + 1 }}
-          </button>
+          <div class="btnActions">
+            <button
+              @click="saveTransactionId(transaction._id)"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#confirmEdit"
+            >
+              Editar Nº{{ index + 1 }}
+            </button>
+            <button
+              @click="saveTransactionId(transaction._id)"
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#confirmDelete"
+            >
+              Eliminar Nº{{ index + 1 }}
+            </button>
+          </div>
         </div>
       </div>
       <div class="modal" id="confirmDelete">
@@ -222,6 +224,7 @@ export default {
 .container-xs {
   display: flex;
   flex-wrap: wrap;
+  padding: 5px;
 }
 
 .transaction {
@@ -230,5 +233,21 @@ export default {
   border-radius: 5px;
   flex: 0 0 20%;
   box-sizing: border-box;
+  margin: 3px;
+}
+
+.btnActions {
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+}
+
+.btnActions button {
+  margin: 3px;
+  border: 1px solid #35314a;
+}
+
+.modal {
+  color: black;
 }
 </style>
