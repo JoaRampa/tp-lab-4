@@ -26,6 +26,9 @@
         <div class="amount">{{ amount }}</div>
         <div>${{ calculateCash(amount, cryptoCode) }}</div>
       </div>
+      <div class="header p" style="align-items: right">
+        <p>Total: ${{ totalCash }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -38,6 +41,13 @@ export default {
     ...mapGetters(["userId"]),
     ...mapGetters("transactions", ["getWallet"]),
     ...mapGetters(["getBTCPrice", "getETHPrice", "getUSDTPrice"]),
+    totalCash() {
+      let total = 0;
+      for (let cryptoCode in this.getWallet) {
+        total += this.calculateCash(this.getWallet[cryptoCode], cryptoCode);
+      }
+      return this.formatNumber(total);
+    },
   },
   methods: {
     ...mapActions("transactions", ["getState"]),
@@ -46,11 +56,21 @@ export default {
       const cryptoGetter = `get${code}Price`;
       const cryptoPrice = this[cryptoGetter];
       if (cryptoPrice) {
-        return parseFloat(amount * cryptoPrice.totalBid);
+        const cash = parseFloat(amount * cryptoPrice.totalBid);
+        return cash;
       } else {
         console.error(`Getter ${cryptoGetter} no encontrado`);
         return 0;
       }
+    },
+    formatNumber(number) {
+      if (typeof number === "undefined") {
+        return "";
+      }
+      const numStr = number.toString();
+      const parts = numStr.split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      return parts.join(",");
     },
     async fetchData() {
       try {
@@ -59,14 +79,6 @@ export default {
         console.error("Error:", error);
       }
     },
-  },
-  async created() {
-    await this.fetchData();
-
-    // Actualiza los datos
-    setInterval(async () => {
-      await this.fetchData();
-    }, 1000);
   },
 };
 </script>

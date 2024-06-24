@@ -4,6 +4,7 @@ import PucharseView from "../views/ViewPucharse.vue";
 import WalletView from "@/views/WalletView.vue";
 import HistoryView from "@/views/ViewHistory.vue";
 import store from "@/store";
+import InvestmentsCrypto from "@/components/InvestmentsCrypto.vue";
 
 const routes = [
   {
@@ -28,6 +29,12 @@ const routes = [
     path: "/history",
     name: "HistoryView",
     component: HistoryView,
+    meta: { requiereAuth: true },
+  },
+  {
+    path: "/investments",
+    name: "investmentsCrypto",
+    component: InvestmentsCrypto,
     meta: { requiereAuth: true },
   },
 ];
