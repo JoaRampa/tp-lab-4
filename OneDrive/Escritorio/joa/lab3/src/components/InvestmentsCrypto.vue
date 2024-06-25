@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="component">
     <h2>Resumen de Inversiones</h2>
-    <div>Total: ${{ totalCash }}</div>
+    <div>Gastos por compras y ventas: {{ calculateInvestment() }}</div>
+    <div>Poseciones: {{ totalCash }}</div>
+    <div>Total Ganancias perdidas=</div>
   </div>
 </template>
 
@@ -9,6 +11,13 @@
 import { mapGetters, mapActions } from "vuex";
 
 export default {
+  data() {
+    return {
+      transactions: [],
+      crypto_amount: 0,
+      money: 0,
+    };
+  },
   computed: {
     ...mapGetters(["userId"]),
     ...mapGetters("transactions", ["getWallet"]),
@@ -23,6 +32,24 @@ export default {
   },
   methods: {
     ...mapActions("transactions", ["getState"]),
+    ...mapActions("transactions", ["getHistory"]),
+    calculateInvestment() {
+      let buys = 0;
+      let sales = 0;
+
+      for (let index = 0; index < this.transactions.length; index++) {
+        let transaction = this.transactions[index];
+
+        if (transaction.action === "purchase") {
+          buys -= transaction.money;
+        } else if (transaction.action === "sale") {
+          sales += transaction.money;
+        }
+      }
+
+      let invTotal = buys + sales;
+      return this.formatNumber(invTotal);
+    },
     calculateCash(amount, cryptoCode) {
       const code = cryptoCode.toUpperCase();
       const cryptoGetter = `get${code}Price`;
@@ -52,12 +79,19 @@ export default {
       }
     },
   },
-  created() {
-    this.fetchData(); // Llama a fetchData al crear el componente para obtener los datos iniciales
+  async created() {
+    try {
+      this.transactions = await this.getHistory(this.userId);
+      this.fetchData();
+    } catch (error) {
+      console.error("Error al obtener el historial:", error);
+    }
   },
 };
 </script>
 
 <style scoped>
-/* Estilos según necesidades */
+.component {
+  color: beige;
+}
 </style>
