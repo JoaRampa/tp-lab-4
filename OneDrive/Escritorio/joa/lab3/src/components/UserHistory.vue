@@ -12,20 +12,27 @@
         <button
           class="btn btn-primary"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseExample"
-          aria-expanded="false"
-          aria-controls="collapseExample"
+          @click="toggleMenu(index)"
         >
           <p>Transacción {{ index + 1 }} {{ transaction.crypto_code }} ▼</p>
         </button>
 
-        <div class="collapse" id="collapseExample">
+        <div v-if="activeTransaction === index" class="collapse show">
           <div
             class="transaction-box"
-            :class="{ purchase: transaction.action === 'purchase' }"
+            :class="{
+              purchase: transaction.action === 'purchase',
+              sale: transaction.action !== 'purchase',
+            }"
           >
-            <p>Acción: {{ transaction.action }}</p>
+            <p
+              :class="{
+                'text-green': transaction.action === 'purchase',
+                'text-red': transaction.action !== 'purchase',
+              }"
+            >
+              Acción: {{ transaction.action }}
+            </p>
           </div>
           <p>Cantidad: {{ transaction.crypto_amount }}</p>
           <p>Pesos ${{ transaction.money }}</p>
@@ -138,6 +145,7 @@ export default {
     return {
       transactions: [],
       showMenu: false,
+      activeTransaction: null,
       deleteTransactionId: null,
       editTransactionId: null,
       crypto_amount: 0,
@@ -213,6 +221,9 @@ export default {
       this.deleteTransactionId = transactionId;
       this.editTransactionId = transactionId;
     },
+    toggleMenu(index) {
+      this.activeTransaction = this.activeTransaction === index ? null : index;
+    },
   },
 };
 </script>
@@ -249,5 +260,13 @@ export default {
 
 .modal {
   color: black;
+}
+
+.text-green {
+  color: green;
+}
+
+.text-red {
+  color: red;
 }
 </style>

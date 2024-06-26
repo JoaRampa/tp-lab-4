@@ -3,7 +3,7 @@
     <h2>Resumen de Inversiones</h2>
     <div>Gastos por compras y ventas: {{ calculateInvestment() }}</div>
     <div>Poseciones: {{ totalCash }}</div>
-    <div>Total Ganancias perdidas=</div>
+    <div>Total Ganancias/Perdidas= {{ calculateTotalProfit() }}</div>
   </div>
 </template>
 
@@ -14,7 +14,6 @@ export default {
   data() {
     return {
       transactions: [],
-      crypto_amount: 0,
       money: 0,
     };
   },
@@ -61,6 +60,17 @@ export default {
         console.error(`Getter ${cryptoGetter} no encontrado`);
         return 0;
       }
+    },
+    calculateTotalProfit() {
+      let totalInvestments = parseFloat(
+        this.calculateInvestment().replace(".", "").replace(",", ".")
+      );
+      let totalCashValue = parseFloat(
+        this.totalCash.replace(".", "").replace(",", ".")
+      );
+
+      let totalProfit = totalInvestments + totalCashValue;
+      return this.formatNumber(totalProfit);
     },
     formatNumber(number) {
       if (typeof number === "undefined") {

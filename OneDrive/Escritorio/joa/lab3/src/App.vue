@@ -8,22 +8,31 @@
         <router-link :to="{ name: 'viewPucharse' }" style="margin-left: 18px">
           Tradear</router-link
         >
+        <router-link
+          :to="{ name: 'investmentsCrypto' }"
+          style="margin-left: 18px"
+        >
+          Analisis Inversiones</router-link
+        >
       </div>
       <div
         class="user-menu"
         @mouseover="showMenu = true"
         @mouseleave="showMenu = false"
       >
-        <img
-          src="@/assets/user.png"
-          alt="User"
-          width="35"
-          :class="{ hovered: showMenu }"
-        />
+        <div class="brand">
+          <img
+            src="@/assets/user.png"
+            alt="User"
+            width="35"
+            height="33"
+            :class="{ hovered: showMenu }"
+          />
+          <b :class="{ hovered: showMenu }">{{ userId }}</b>
+        </div>
         <div v-show="showMenu" class="menu">
           <div class="user-info">
-            <img src="@/assets/logo.png" alt="Logo" width="25" />
-            <b>{{ userId }}</b>
+            <img src="@/assets/logo.png" alt="Logo" width="35" />
           </div>
           <div class="options-menu">
             <div class="option wallet">
@@ -97,10 +106,9 @@ export default {
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  text-align: left;
-  background-color: rgb(14, 15, 46);
+  padding: 8px;
+  border-bottom: 1px solid #35314a;
+  margin-bottom: 15px;
 }
 
 nav a {
@@ -165,11 +173,11 @@ b {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .hovered {
-  filter: brightness(130%);
+  filter: brightness(150%);
 }
 </style>

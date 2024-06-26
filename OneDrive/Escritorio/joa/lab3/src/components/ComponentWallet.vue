@@ -80,11 +80,11 @@ export default {
       }
     },
     mounted() {
-    // Iniciar la actualización cada 10 segundos
-    setInterval(async () => {
-      await this.fetchData();
-    }, 10000); // 10000 milisegundos = 10 segundos
-  },
+      // Iniciar la actualización cada 10 segundos
+      setInterval(async () => {
+        await this.fetchData();
+      }, 10000); // 10000 milisegundos = 10 segundos
+    },
   },
 };
 </script>
