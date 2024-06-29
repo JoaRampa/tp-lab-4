@@ -1,7 +1,7 @@
 <template>
   <div class="title">
-    <b style="font-size: 30px; margin-bottom: 25px">
-      <img src="@/assets/mywallet.png" alt="Logo" width="45" />Billetera de
+    <b style="font-size: 30px; margin-bottom: 5px">
+      <img src="@/assets/mywallet.png" alt="Logo" width="100" />Billetera
     </b>
   </div>
   <ComponentWallet />

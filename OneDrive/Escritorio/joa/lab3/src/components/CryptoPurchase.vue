@@ -187,18 +187,15 @@ export default {
 }
 
 .purchase {
-  width: 365px;
-  background-color: rgb(14, 15, 46);
+  width: 100%;
   padding: 15px;
-  border: 1px solid #35314a;
-  border-radius: 15px;
 }
 
 .crypto {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  margin-bottom: 35px;
   height: 30px;
 }
 

@@ -1,9 +1,15 @@
 <template>
+  <div>
+    <img src="@/assets/arrow.png" alt="image" style="width: 100px" />
+    <b style="font-size: 30px"> Resumen de Inversiones</b>
+    <img src="@/assets/arrow.png" alt="image" style="width: 100px" />
+  </div>
   <div class="component">
-    <h2>Resumen de Inversiones</h2>
-    <div>Gastos por compras y ventas: {{ calculateInvestment() }}</div>
-    <div>Poseciones: {{ totalCash }}</div>
-    <div>Total Ganancias/Perdidas= {{ calculateTotalProfit() }}</div>
+    <div class="investments">
+      <div>Gastos por compras y ventas: {{ calculateInvestment() }}</div>
+      <div>Poseciones: {{ totalCash }}</div>
+      <div>Total Ganancias/Perdidas= {{ calculateTotalProfit() }}</div>
+    </div>
   </div>
 </template>
 
@@ -26,7 +32,7 @@ export default {
       for (let cryptoCode in this.getWallet) {
         total += this.calculateCash(this.getWallet[cryptoCode], cryptoCode);
       }
-      return this.formatNumber(total);
+      return total;
     },
   },
   methods: {
@@ -47,14 +53,14 @@ export default {
       }
 
       let invTotal = buys + sales;
-      return this.formatNumber(invTotal);
+      return invTotal;
     },
     calculateCash(amount, cryptoCode) {
       const code = cryptoCode.toUpperCase();
       const cryptoGetter = `get${code}Price`;
       const cryptoPrice = this[cryptoGetter];
       if (cryptoPrice) {
-        const cash = parseFloat(amount * cryptoPrice.totalBid);
+        const cash = parseFloat(amount * cryptoPrice.totalAsk);
         return cash;
       } else {
         console.error(`Getter ${cryptoGetter} no encontrado`);
@@ -62,24 +68,11 @@ export default {
       }
     },
     calculateTotalProfit() {
-      let totalInvestments = parseFloat(
-        this.calculateInvestment().replace(".", "").replace(",", ".")
-      );
-      let totalCashValue = parseFloat(
-        this.totalCash.replace(".", "").replace(",", ".")
-      );
+      let totalInvestments = this.calculateInvestment();
+      let totalCashValue = this.totalCash;
 
       let totalProfit = totalInvestments + totalCashValue;
-      return this.formatNumber(totalProfit);
-    },
-    formatNumber(number) {
-      if (typeof number === "undefined") {
-        return "";
-      }
-      const numStr = number.toString();
-      const parts = numStr.split(".");
-      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-      return parts.join(",");
+      return totalProfit.toFixed(2);
     },
     async fetchData() {
       try {
@@ -102,6 +95,16 @@ export default {
 
 <style scoped>
 .component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.investments {
+  width: 50%;
+  border: 1px solid #35314a;
+  border-radius: 15px;
   color: beige;
+  padding: 15px;
 }
 </style>

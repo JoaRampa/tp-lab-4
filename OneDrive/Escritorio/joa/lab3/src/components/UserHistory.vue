@@ -1,8 +1,9 @@
 <template>
   <div class="history-page">
-    <h1>
-      Historial de transacciones de <b style="font-size: 35px">{{ userId }}</b>
-    </h1>
+    <div>
+      <img src="@/assets/bchain.png" alt="image" style="width: 100px" />
+      <b style="font-size: 35px">{{ userId }}</b>
+    </div>
     <div class="container-xs">
       <div
         class="transaction"

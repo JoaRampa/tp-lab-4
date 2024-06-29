@@ -108,7 +108,7 @@ nav {
   justify-content: space-between;
   padding: 8px;
   border-bottom: 1px solid #35314a;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
 }
 
 nav a {

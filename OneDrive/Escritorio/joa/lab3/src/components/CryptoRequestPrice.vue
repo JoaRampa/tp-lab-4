@@ -1,10 +1,8 @@
 <template>
-  <div class="contain">
+  <div>
     <div class="cryptos">
-      <div class="header">
-        <p>Moneda</p>
-        <p>Precio de la moneda</p>
-        <p>Operar</p>
+      <div class="header p">
+        <p><img src="@/assets/b.png" />Coins</p>
       </div>
       <div v-for="crypto in cryptoList" :key="crypto.code" class="header">
         <div class="coin">
@@ -16,7 +14,6 @@
         <div v-if="crypto.price" class="row price">
           ${{ formatNumber(crypto.price.totalAsk) }}
         </div>
-        <a class="row trade" href="/pucharse">Operar</a>
       </div>
     </div>
   </div>
@@ -72,16 +69,7 @@ export default {
 </script>
 
 <style scoped>
-.contain {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-}
-
 .cryptos {
-  background-color: rgb(14, 15, 46);
-  width: 50%;
   border: 1px solid #35314a;
   border-radius: 15px;
   color: beige;
@@ -92,10 +80,18 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
   text-align: center;
+  padding: 5px;
+  margin-bottom: 10px;
 }
-
+.header p {
+  background-color: #35314a;
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
 img {
   padding: 5px;
   width: 35px;

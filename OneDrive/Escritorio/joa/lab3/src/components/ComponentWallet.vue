@@ -97,7 +97,6 @@ export default {
 }
 
 .cryptos {
-  background-color: rgb(14, 15, 46);
   width: 50%;
   border: 1px solid #35314a;
   border-radius: 15px;
