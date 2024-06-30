@@ -230,9 +230,6 @@ export default {
 </script>
 
 <style>
-.history-page {
-  color: beige;
-}
 .container-xs {
   display: flex;
   flex-wrap: wrap;

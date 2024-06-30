@@ -72,7 +72,6 @@ export default {
 .cryptos {
   border: 1px solid #35314a;
   border-radius: 15px;
-  color: beige;
   padding: 15px;
 }
 

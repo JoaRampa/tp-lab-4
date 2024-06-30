@@ -4,10 +4,7 @@
       <div class="brand">
         <img src="@/assets/logo.png" alt="Logo" width="35" />
         <b>CRYPCREATE</b>
-        <router-link :to="{ name: 'Home' }">Inicio </router-link>
-        <router-link :to="{ name: 'viewPucharse' }" style="margin-left: 18px">
-          Tradear</router-link
-        >
+        <router-link :to="{ name: 'Home' }">Tradear </router-link>
         <router-link
           :to="{ name: 'investmentsCrypto' }"
           style="margin-left: 18px"
@@ -76,7 +73,7 @@
       <router-view />
     </main>
   </div>
-  <footer>
+  <footer v-if="isAuthenticated">
     <FooterComponent />
   </footer>
 </template>
