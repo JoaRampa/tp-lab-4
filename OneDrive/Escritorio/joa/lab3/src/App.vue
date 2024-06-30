@@ -72,15 +72,24 @@
         </div>
       </div>
     </nav>
-    <router-view />
+    <main>
+      <router-view />
+    </main>
   </div>
+  <footer>
+    <FooterComponent />
+  </footer>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
+  components: {
+    FooterComponent,
+  },
   data() {
     return {
       showMenu: false,
@@ -94,13 +103,21 @@ export default {
 
 <style>
 #app {
+  display: flex;
+  flex-direction: column;
+  color: beige;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   background-color: rgb(14, 15, 46);
   min-height: 100vh;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 nav {
@@ -179,5 +196,13 @@ b {
 
 .hovered {
   filter: brightness(150%);
+}
+main {
+  flex: 1;
+}
+footer {
+  border-top: 1px solid #35314a;
+  width: 100%;
+  margin-top: 100px;
 }
 </style>
