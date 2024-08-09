@@ -1,0 +1,45 @@
+# Ignorar archivos de configuración de sistema
+/.azuredatastudio/
+/.bash_history
+/.dotnet/
+/.gitconfig
+/.lesshst/
+/librarymanager/
+/.nuget/
+/.vscode/
+/.vue-cli-ui/
+/.vuerc
+
+# Ignorar carpetas de usuario
+/AppData/
+/Application Data/
+/Contacts/
+/Documents/
+/Downloads/
+/Favorites/
+/Links/
+/Music/
+/OneDrive/
+/Saved Games/
+/Searches/
+/Videos/
+
+# Ignorar archivos específicos
+ntuser.*
+*.log
+*.tmp
+
+# Ignorar archivos de base de datos
+*.mdf
+*.ldf
+
+# Ignorar directorios de proyectos anteriores
+/lab3/
+/lab4/
+
+# Ignorar carpetas de dependencias (ejemplo Node.js)
+node_modules/
+/dist/
+
+# Ignorar archivos específicos de configuraciones de desarrollo
+.env
