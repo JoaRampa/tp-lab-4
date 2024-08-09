@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\images\\d1c4df8f3bc84755874ee23711aebd59.jpg",
+      "PackagePath": "staticwebassets\\images\\d1c4df8f3bc84755874ee23711aebd59.jpg"
+    },
+    {
       "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

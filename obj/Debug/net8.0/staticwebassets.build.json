@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wFTp/TQUgrWdWzgJf1OalHNvUqHL7ILEE+isUR4p/Uo=",
+  "Hash": "FiqS19YidCgaUCWZUJyGiYLjGF5/GomlF120IFvuESY=",
   "Source": "tp-lab-4",
   "BasePath": "_content/tp-lab-4",
   "Mode": "Default",
@@ -1269,6 +1269,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\images\\d1c4df8f3bc84755874ee23711aebd59.jpg",
+      "SourceId": "tp-lab-4",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\",
+      "BasePath": "_content/tp-lab-4",
+      "RelativePath": "images/d1c4df8f3bc84755874ee23711aebd59.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\d1c4df8f3bc84755874ee23711aebd59.jpg"
     },
     {
       "Identity": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\js\\site.js",

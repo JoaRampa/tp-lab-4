@@ -25,7 +25,7 @@
                 @Html.DisplayNameFor(model => model.fechaNacimiento)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.foto)
+                Foto
             </th>
             <th></th>
         </tr>
@@ -46,7 +46,11 @@
                 @Html.DisplayFor(modelItem => item.fechaNacimiento)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.foto)
+                    @if(!string.IsNullOrEmpty(@item.foto))
+                    {
+                      <img src="~/images/@item.foto" class="img-thumbnail" style="max-height: 60px; width: 75%" asp-append-version="true" />
+                    }
+                
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
