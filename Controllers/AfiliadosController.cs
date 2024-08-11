@@ -56,7 +56,7 @@ namespace tp_lab_4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Apellidos,Nombres,Dni,fechaNacimiento,Foto")] Afiliado afiliado)
+        public async Task<IActionResult> Create([Bind("Id,Apellidos,Nombres,Dni,fechaNacimiento,foto")] Afiliado afiliado)
         {
             if (ModelState.IsValid)
             {
@@ -107,7 +107,7 @@ namespace tp_lab_4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Apellidos,Nombres,Dni,fechaNacimiento,Foto")] Afiliado afiliado)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Apellidos,Nombres,Dni,fechaNacimiento,foto")] Afiliado afiliado)
         {
             if (id != afiliado.Id)
             {
@@ -116,6 +116,31 @@ namespace tp_lab_4.Controllers
 
             if (ModelState.IsValid)
             {
+                var archivos = HttpContext.Request.Form.Files;
+                if (archivos != null && archivos.Count > 0)
+                {
+                    var archivoFoto = archivos[0];
+                    var pathDestino = Path.Combine(_env.WebRootPath, "images");
+                    if (archivoFoto.Length > 0)
+                    {
+                        //genera un nombre aleatorio para el archivo
+                        var archivoDestino = Guid.NewGuid().ToString().Replace("-", "");
+                        archivoDestino += Path.GetExtension(archivoFoto.FileName);
+
+                        if (!string.IsNullOrEmpty(afiliado.foto))
+                        {
+                            string fotoAnterior = Path.Combine(pathDestino, afiliado.foto);
+                            if(System.IO.File.Exists(fotoAnterior))
+                                System.IO.File.Delete(fotoAnterior);
+                        }
+
+                        using (var filestream = new FileStream(Path.Combine(pathDestino, archivoDestino), FileMode.Create))
+                        {
+                            archivoFoto.CopyTo(filestream);
+                            afiliado.foto = archivoDestino;
+                        };
+                    }
+                }
                 try
                 {
                     _context.Update(afiliado);

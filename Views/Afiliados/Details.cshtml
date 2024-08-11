@@ -38,7 +38,10 @@
             @Html.DisplayNameFor(model => model.foto)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.foto)
+            @if (!string.IsNullOrEmpty(@Model.foto))
+            {
+                <img src="~/images/@Model.foto" class="img-thumbnail" style="max-height: 60px; width: 75px" asp-append-version="true" />
+            }
         </dd>
     </dl>
 </div>
