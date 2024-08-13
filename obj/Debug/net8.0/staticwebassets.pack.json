@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\images\\d1c4df8f3bc84755874ee23711aebd59.jpg",
-      "PackagePath": "staticwebassets\\images\\d1c4df8f3bc84755874ee23711aebd59.jpg"
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\images\\710ad4d85f62444b9df12385366923d0.jpg",
+      "PackagePath": "staticwebassets\\images\\710ad4d85f62444b9df12385366923d0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\images\\d7f67256883540e180ced86f4b6a1370.jpg",
+      "PackagePath": "staticwebassets\\images\\d7f67256883540e180ced86f4b6a1370.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\js\\preview.js",
+      "PackagePath": "staticwebassets\\js\\preview.js"
     },
     {
       "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\js\\site.js",
