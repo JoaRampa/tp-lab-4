@@ -45,6 +45,15 @@
         </form>
     </div>
 </div>
+<form asp-action="Importar" enctype="multipart/form-data">
+    <div>
+        <label class="control-label">Seleccione archivo csv</label>
+        <input asp-for="foto" type="file" id="import"/>
+    </div>
+    <div>
+        <input type="submit" value="Importar" class="btn btn-primary" />
+    </div>
+</form>
 
 <div>
     <a asp-action="Index">Back to List</a>

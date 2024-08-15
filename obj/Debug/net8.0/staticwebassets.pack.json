@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\images\\d7f67256883540e180ced86f4b6a1370.jpg"
     },
     {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\importaciones\\5966239e8d1440f293a07e3caebd1f15.txt",
+      "PackagePath": "staticwebassets\\importaciones\\5966239e8d1440f293a07e3caebd1f15.txt"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\importaciones\\b32433b876f5432ba382dc5d4403565a.csv",
+      "PackagePath": "staticwebassets\\importaciones\\b32433b876f5432ba382dc5d4403565a.csv"
+    },
+    {
       "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\js\\preview.js",
       "PackagePath": "staticwebassets\\js\\preview.js"
     },

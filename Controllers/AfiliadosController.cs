@@ -27,6 +27,70 @@ namespace tp_lab_4.Controllers
             return View(await _context.afiliados.ToListAsync());
         }
 
+        public async Task<IActionResult> Importar()
+        {
+            var archivos = HttpContext.Request.Form.Files;
+            if (archivos != null && archivos.Count > 0)
+            {
+                var archivo = archivos[0];
+                if (archivo.Length > 0)
+                {
+                    var pathDestino = Path.Combine(_env.WebRootPath, "importaciones");
+                    var archivoDestino = Guid.NewGuid().ToString().Replace("-", "");
+                    archivoDestino += Path.GetExtension(archivo.FileName);
+                    var rutaDestino = Path.Combine(pathDestino, archivoDestino);
+
+                    using (var filestream = new FileStream(rutaDestino, FileMode.Create))
+                    {
+                        archivo.CopyTo(filestream);
+                    };
+
+                    using (var file = new FileStream(rutaDestino, FileMode.Open))
+                    {
+                        List<string> renglones = new List<string>();
+                        List<Afiliado> afiliadoArchivo = new List<Afiliado>();
+
+                        StreamReader fileContent = new StreamReader(file, System.Text.Encoding.Default);  
+                        do
+                        {
+                            renglones.Add(fileContent.ReadLine());
+                        }
+                        while (!fileContent.EndOfStream);
+
+                        foreach (string renglon in renglones)
+                        {
+                            int salida;
+                            string[] datos = renglon.Split(',', ';');
+                            if (datos.Count() > 0)
+                            {
+                                Afiliado afiliado1 = new Afiliado();
+                                afiliado1.Apellidos = datos[0];
+                                afiliado1.Nombres = datos[1];
+                                afiliado1.DNI = int.TryParse(datos[2], out salida) ? salida : 0;
+                                if (DateTime.TryParse(datos[3], out DateTime fechaNacimiento))
+                                {
+                                    afiliado1.fechaNacimiento = fechaNacimiento;
+                                }
+                                else
+                                {
+                                    afiliado1.fechaNacimiento = fechaNacimiento.Date;
+                                }
+                                afiliadoArchivo.Add(afiliado1);
+                            }
+                        }
+                        if (afiliadoArchivo.Count > 0)
+                        {
+                            _context.afiliados.AddRange(afiliadoArchivo);
+                            _context.SaveChanges();
+                        }
+
+                        ViewBag.cantReng = afiliadoArchivo.Count + " de " + renglones.Count;
+                    }
+                }
+            }
+           return View("Index",await _context.afiliados.ToListAsync());
+        }
+
         // GET: Afiliados/Details/5
         public async Task<IActionResult> Details(int? id)
         {
