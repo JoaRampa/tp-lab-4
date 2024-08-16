@@ -89,7 +89,6 @@ C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\System.Reflection.MetadataL
 C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\af\Humanizer.resources.dll
 C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\ar\Humanizer.resources.dll
@@ -261,9 +260,9 @@ C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\scopedcss\bundle\tp-lab-4.styles.css
 C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\scopedcss\projectbundle\tp-lab-4.bundle.scp.css
-C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\tp-lab-4.csproj.CopyComplete
 C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\tp-lab-4.dll
 C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\refint\tp-lab-4.dll
 C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\tp-lab-4.pdb
 C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\tp-lab-4.genruntimeconfig.cache
 C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\ref\tp-lab-4.dll
+C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\tp-lab-4.csproj.Up2Date

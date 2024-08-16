@@ -22,9 +22,14 @@ namespace tp_lab_4.Controllers
         }
 
         // GET: Afiliados
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string busqApellido, int? busqDni)
         {
-            return View(await _context.afiliados.ToListAsync());
+            var appDBcontext = _context.afiliados.Select(a => a);
+
+            if (!string.IsNullOrEmpty(busqApellido)) { appDBcontext = appDBcontext.Where(a => a.Apellidos.Contains(busqApellido)); }
+            if (busqDni.HasValue) { appDBcontext = appDBcontext.Where(a => a.DNI.ToString().Contains(busqDni.ToString())); }
+
+            return View(await appDBcontext.ToListAsync());
         }
 
         public async Task<IActionResult> Importar()

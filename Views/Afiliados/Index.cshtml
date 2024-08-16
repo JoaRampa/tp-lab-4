@@ -9,6 +9,16 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<form asp-action="Index" method="get">       
+    <p>
+        Apellido <input type="text" name="busqApellido"/>
+        DNI <input type="number" name="busqDni" />
+
+        <input type="submit" value="Filtrar"/>
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>

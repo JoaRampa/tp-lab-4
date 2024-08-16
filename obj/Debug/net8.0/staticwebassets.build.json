@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9QKXlhXSjp0n7lo/MTjqKJDlYOcLIXiPTPFWJICAdFA=",
+  "Hash": "hODOCkiZSnjAjqY65D19SrOUWnAUelCbLFOgYkHzrIM=",
   "Source": "tp-lab-4",
   "BasePath": "_content/tp-lab-4",
   "Mode": "Default",
@@ -1345,6 +1345,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\importaciones\\b32433b876f5432ba382dc5d4403565a.csv"
+    },
+    {
+      "Identity": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\importaciones\\f7bf0dbc0f4b4be683246ff1a96c706c.csv",
+      "SourceId": "tp-lab-4",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\",
+      "BasePath": "_content/tp-lab-4",
+      "RelativePath": "importaciones/f7bf0dbc0f4b4be683246ff1a96c706c.csv",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\importaciones\\f7bf0dbc0f4b4be683246ff1a96c706c.csv"
     },
     {
       "Identity": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\js\\preview.js",
