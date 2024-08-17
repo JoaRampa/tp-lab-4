@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using tp_lab_4.Data;
 using tp_lab_4.Models;
+using tp_lab_4.ViewsModels;
 
 namespace tp_lab_4.Controllers
 {
@@ -24,12 +25,20 @@ namespace tp_lab_4.Controllers
         // GET: Afiliados
         public async Task<IActionResult> Index(string busqApellido, int? busqDni)
         {
+            //filtros
             var appDBcontext = _context.afiliados.Select(a => a);
 
             if (!string.IsNullOrEmpty(busqApellido)) { appDBcontext = appDBcontext.Where(a => a.Apellidos.Contains(busqApellido)); }
             if (busqDni.HasValue) { appDBcontext = appDBcontext.Where(a => a.DNI.ToString().Contains(busqDni.ToString())); }
 
-            return View(await appDBcontext.ToListAsync());
+            AfiliadosViewModel model = new()
+            {
+                Afiliados1 = [.. appDBcontext],
+                Dni = busqDni,
+                Apellido1 = busqApellido
+            };
+
+            return View(model);
         }
 
         public async Task<IActionResult> Importar()
