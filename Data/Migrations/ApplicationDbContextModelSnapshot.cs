@@ -17,7 +17,7 @@ namespace tp_lab_4.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.7")
+                .HasAnnotation("ProductVersion", "8.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -279,18 +279,19 @@ namespace tp_lab_4.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("afiliadoId")
+                    b.Property<int>("AfiliadoId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("descripcion")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("fechaSolicitud")
+                    b.Property<DateTime>("FechaSolicitud")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Observacion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("afiliadoId");
+                    b.HasIndex("AfiliadoId");
 
                     b.ToTable("tickets");
                 });
@@ -303,22 +304,24 @@ namespace tp_lab_4.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("descripcionPedido")
+                    b.Property<string>("DescripcionPedido")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("estados")
-                        .HasColumnType("bit");
+                    b.Property<int>("EstadosId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TicketId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("fechaEstado")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ticketsId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("ticketsId");
+                    b.HasIndex("EstadosId");
+
+                    b.HasIndex("TicketId");
 
                     b.ToTable("TicketDetalles");
                 });
@@ -376,24 +379,32 @@ namespace tp_lab_4.Data.Migrations
 
             modelBuilder.Entity("tp_lab_4.Models.Ticket", b =>
                 {
-                    b.HasOne("tp_lab_4.Models.Afiliado", "afiliados")
+                    b.HasOne("tp_lab_4.Models.Afiliado", "Afiliados")
                         .WithMany()
-                        .HasForeignKey("afiliadoId")
+                        .HasForeignKey("AfiliadoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("afiliados");
+                    b.Navigation("Afiliados");
                 });
 
             modelBuilder.Entity("tp_lab_4.Models.TicketDetalle", b =>
                 {
-                    b.HasOne("tp_lab_4.Models.Ticket", "tickets")
+                    b.HasOne("tp_lab_4.Models.Estado", "Estados")
                         .WithMany()
-                        .HasForeignKey("ticketsId")
+                        .HasForeignKey("EstadosId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("tickets");
+                    b.HasOne("tp_lab_4.Models.Ticket", "Tickets")
+                        .WithMany()
+                        .HasForeignKey("TicketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Estados");
+
+                    b.Navigation("Tickets");
                 });
 #pragma warning restore 612, 618
         }

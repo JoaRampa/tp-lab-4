@@ -3,9 +3,9 @@
     public class Ticket
     {
         public int Id { get; set; }
-        public int afiliadoId { get; set; }
-        public Afiliado afiliados { get; set; }
-        public DateTime fechaSolicitud { get; set; }
-        public bool descripcion { get; set; }
+        public int AfiliadoId { get; set; }
+        public Afiliado? Afiliados { get; set; }
+        public DateTime FechaSolicitud { get; set; }
+        public string Observacion { get; set; }
     }
 }

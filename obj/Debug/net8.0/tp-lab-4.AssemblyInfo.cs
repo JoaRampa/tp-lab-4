@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tp-lab-4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fece176609f2364efb3e1b4ae6d57e95584d4ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8329bae88e06bb31c6e6388519dbb05f75066f67")]
 [assembly: System.Reflection.AssemblyProductAttribute("tp-lab-4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tp-lab-4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

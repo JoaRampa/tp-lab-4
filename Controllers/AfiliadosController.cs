@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using tp_lab_4.ViewsModels;
 
 namespace tp_lab_4.Controllers
 {
+    [Authorize]
     public class AfiliadosController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -102,7 +104,14 @@ namespace tp_lab_4.Controllers
                     }
                 }
             }
-           return View("Index",await _context.afiliados.ToListAsync());
+            var afiliadosList = await _context.afiliados.ToListAsync();
+            AfiliadosViewModel model = new AfiliadosViewModel
+            {
+                Afiliados1 = afiliadosList,
+                Dni = null,
+                Apellido1 = null
+            };
+            return View("Index", model);
         }
 
         // GET: Afiliados/Details/5
@@ -134,7 +143,7 @@ namespace tp_lab_4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Apellidos,Nombres,Dni,fechaNacimiento,foto")] Afiliado afiliado)
+        public async Task<IActionResult> Create([Bind("Id,Apellidos,Nombres,DNI,fechaNacimiento,foto")] Afiliado afiliado)
         {
             if (ModelState.IsValid)
             {
@@ -185,7 +194,7 @@ namespace tp_lab_4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Apellidos,Nombres,Dni,fechaNacimiento,foto")] Afiliado afiliado)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Apellidos,Nombres,DNI,fechaNacimiento,foto")] Afiliado afiliado)
         {
             if (id != afiliado.Id)
             {
