@@ -5,14 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - tp_lab_4</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css"/>
-    <link rel="stylesheet" href="~/tp_lab_4.styles.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/tp_lab_4.styles.css" asp-append-version="true" />
+    <style>
+        body {
+            background-color: rgb(14, 15, 46);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .content-wrapper {
+            flex: 1;
+        }
+
+        footer {
+            border-top: 1px solid #cccccc;
+            text-align: center;
+            padding: 1rem;
+        }
+        .datos {
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">tp_lab_4</a>
+                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">tp_lab_4</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,16 +44,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="TicketDetalles" asp-action="Index">Inicio</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Tickets" asp-action="Index">Tickets</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="TicketDetalles" asp-action="Index">Ticket Detalle</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Afiliados" asp-action="Index">Afiliado</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Tickets" asp-action="Index">Tickets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Estados" asp-action="Index">Estados</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Afiliados" asp-action="Index">Afiliado</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -37,14 +61,26 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-    <footer class="border-top footer text-muted">
+    <div class="content-wrapper">
         <div class="container">
-            &copy; 2024 - tp_lab_4 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <footer class="footer text-muted">
+        <div class="datos">
+            <div>
+                &copy; 2024 - tp_lab_4 -
+            </div>
+            °
+            <div>
+                sitio web:  <a href="https://github.com/JoaRampa">https://github.com/JoaRampa</a>
+            </div>
+            °
+            <div>
+                Contacto:  Rampajoa@gmail.com
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
