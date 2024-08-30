@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using tp_lab_4.Data;
 using tp_lab_4.Models;
 using tp_lab_4.ViewsModels;
-
 namespace tp_lab_4.Controllers
 {
     public class TicketsController : Controller
@@ -21,10 +21,39 @@ namespace tp_lab_4.Controllers
         }
 
         // GET: Tickets
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string busqObs, int? busqAfiliado, int page = 1)
         {
-            var applicationDbContext = _context.tickets.Include(t => t.Afiliados);
-            return View(await applicationDbContext.ToListAsync());
+            var pageSize = 3; // Número de elementos por página
+
+            var appDBcontext = _context.tickets.Include(t => t.Afiliados).AsQueryable();
+
+            if (!string.IsNullOrEmpty(busqObs))
+            {
+                appDBcontext = appDBcontext.Where(a => a.Observacion.Contains(busqObs));
+            }
+            if (busqAfiliado.HasValue)
+            {
+                appDBcontext = appDBcontext.Where(a => a.AfiliadoId == busqAfiliado.Value);
+            }
+
+            var totalTickets = await appDBcontext.CountAsync();
+            var tickets = await appDBcontext
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var model = new TicketViewModel
+            {
+                Tickets1 = tickets,
+                AfiliadoId = busqAfiliado,
+                Observacion1 = busqObs,
+                TotalPages = (int)Math.Ceiling(totalTickets / (double)pageSize),
+                CurrentPage = page
+            };
+
+            ViewData["AfiliadoId"] = new SelectList(_context.afiliados, "Id", "DNI", busqAfiliado);
+
+            return View(model);
         }
 
         // GET: Tickets/Details/5
@@ -47,6 +76,7 @@ namespace tp_lab_4.Controllers
         }
 
         // GET: Tickets/Create
+        [Authorize]
         public IActionResult Create()
         {
             ViewData["AfiliadoId"] = new SelectList(_context.afiliados, "Id", "DNI");
@@ -58,6 +88,7 @@ namespace tp_lab_4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Create([Bind("Id,AfiliadoId,FechaSolicitud,Observacion")] Ticket modelo)
         {
             if (ModelState.IsValid)
@@ -71,6 +102,7 @@ namespace tp_lab_4.Controllers
         }
 
         // GET: Tickets/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -92,6 +124,7 @@ namespace tp_lab_4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(int id, [Bind("Id,AfiliadoId,FechaSolicitud,Observacion")] Ticket ticket)
         {
             if (id != ticket.Id)
@@ -124,6 +157,7 @@ namespace tp_lab_4.Controllers
         }
 
         // GET: Tickets/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

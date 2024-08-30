@@ -12,7 +12,6 @@ using tp_lab_4.ViewsModels;
 
 namespace tp_lab_4.Controllers
 {
-    [Authorize]
     public class AfiliadosController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -42,7 +41,7 @@ namespace tp_lab_4.Controllers
 
             return View(model);
         }
-
+        [Authorize]
         public async Task<IActionResult> Importar()
         {
             var archivos = HttpContext.Request.Form.Files;
@@ -115,6 +114,7 @@ namespace tp_lab_4.Controllers
         }
 
         // GET: Afiliados/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -133,6 +133,7 @@ namespace tp_lab_4.Controllers
         }
 
         // GET: Afiliados/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -143,6 +144,7 @@ namespace tp_lab_4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Create([Bind("Id,Apellidos,Nombres,DNI,fechaNacimiento,foto")] Afiliado afiliado)
         {
             if (ModelState.IsValid)
@@ -174,6 +176,7 @@ namespace tp_lab_4.Controllers
         }
 
         // GET: Afiliados/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -194,6 +197,7 @@ namespace tp_lab_4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Apellidos,Nombres,DNI,fechaNacimiento,foto")] Afiliado afiliado)
         {
             if (id != afiliado.Id)
@@ -250,6 +254,7 @@ namespace tp_lab_4.Controllers
         }
 
         // GET: Afiliados/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

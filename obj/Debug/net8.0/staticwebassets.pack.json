@@ -5,6 +5,658 @@
       "PackagePath": "staticwebassets\\tp-lab-4.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\images\\710ad4d85f62444b9df12385366923d0.jpg",
+      "PackagePath": "staticwebassets\\images\\710ad4d85f62444b9df12385366923d0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\images\\8c70d3243efc426a9bbe2c8caa8824f7.jpg",
+      "PackagePath": "staticwebassets\\images\\8c70d3243efc426a9bbe2c8caa8824f7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\images\\d7f67256883540e180ced86f4b6a1370.jpg",
+      "PackagePath": "staticwebassets\\images\\d7f67256883540e180ced86f4b6a1370.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\importaciones\\50c20833e627476d89fdba9f7d118bbf.csv",
+      "PackagePath": "staticwebassets\\importaciones\\50c20833e627476d89fdba9f7d118bbf.csv"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\importaciones\\5966239e8d1440f293a07e3caebd1f15.txt",
+      "PackagePath": "staticwebassets\\importaciones\\5966239e8d1440f293a07e3caebd1f15.txt"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\importaciones\\9cc4aaa5e2a04b27ad14c48ff49b9e79.csv",
+      "PackagePath": "staticwebassets\\importaciones\\9cc4aaa5e2a04b27ad14c48ff49b9e79.csv"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\importaciones\\a0ae06552c0b41159a102b5a335d21e2.csv",
+      "PackagePath": "staticwebassets\\importaciones\\a0ae06552c0b41159a102b5a335d21e2.csv"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\importaciones\\b32433b876f5432ba382dc5d4403565a.csv",
+      "PackagePath": "staticwebassets\\importaciones\\b32433b876f5432ba382dc5d4403565a.csv"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\importaciones\\c1406a5835754e00add68f2160a38e20.csv",
+      "PackagePath": "staticwebassets\\importaciones\\c1406a5835754e00add68f2160a38e20.csv"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\importaciones\\cbaa8d7b8afe4980a7d4761d0bf7b088.csv",
+      "PackagePath": "staticwebassets\\importaciones\\cbaa8d7b8afe4980a7d4761d0bf7b088.csv"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\importaciones\\f7bf0dbc0f4b4be683246ff1a96c706c.csv",
+      "PackagePath": "staticwebassets\\importaciones\\f7bf0dbc0f4b4be683246ff1a96c706c.csv"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\js\\preview.js",
+      "PackagePath": "staticwebassets\\js\\preview.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\129531479",
+      "PackagePath": "staticwebassets\\lib"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\129531479(1)",
+      "PackagePath": "staticwebassets\\lib"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-467754-8979fbf79bf6.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-467754-8979fbf79bf6.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\app_assets_modules_github_behaviors_commenting_edit_ts-app_assets_modules_github_behaviors_ht-83c235-aeae6fcdf371.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\app_assets_modules_github_behaviors_commenting_edit_ts-app_assets_modules_github_behaviors_ht-83c235-aeae6fcdf371.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\app_assets_modules_github_behaviors_task-list_ts-app_assets_modules_github_sso_ts-ui_packages-e1ce06-30f9d5de7ad2.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\app_assets_modules_github_behaviors_task-list_ts-app_assets_modules_github_sso_ts-ui_packages-e1ce06-30f9d5de7ad2.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\app_assets_modules_github_blob-anchor_ts-app_assets_modules_github_jump-to_page-views_ts-ui_p-38f236-6918e89ea155.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\app_assets_modules_github_blob-anchor_ts-app_assets_modules_github_jump-to_page-views_ts-ui_p-38f236-6918e89ea155.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\app_assets_modules_github_ref-selector_ts-00df584d9e79.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\app_assets_modules_github_ref-selector_ts-00df584d9e79.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\app_assets_modules_github_repositories_get-repo-element_ts-78999cbaea69.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\app_assets_modules_github_repositories_get-repo-element_ts-78999cbaea69.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\app_assets_modules_github_sticky-scroll-into-view_ts-112600808cf9.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\app_assets_modules_github_sticky-scroll-into-view_ts-112600808cf9.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\behaviors-b43b83716346.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\behaviors-b43b83716346.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\code-7e14c25064d5.css",
+      "PackagePath": "staticwebassets\\lib\\code-7e14c25064d5.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\code-menu-a8d08997ac4f.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\code-menu-a8d08997ac4f.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\codespaces-005e47f4f276.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\codespaces-005e47f4f276.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\dark_tritanopia-d3ff9822923b.css",
+      "PackagePath": "staticwebassets\\lib\\dark_tritanopia-d3ff9822923b.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\element-registry-2a63d29814eb.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\element-registry-2a63d29814eb.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\environment-924e60bca7d2.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\environment-924e60bca7d2.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\github-e4eed26e112b.css",
+      "PackagePath": "staticwebassets\\lib\\github-e4eed26e112b.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\github-elements-508a45ca23c6.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\github-elements-508a45ca23c6.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\global-561250c1bd8a.css",
+      "PackagePath": "staticwebassets\\lib\\global-561250c1bd8a.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\global-create-menu-f5f67baa8031.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\global-create-menu-f5f67baa8031.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\global-user-nav-drawer-a262b436b18b.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\global-user-nav-drawer-a262b436b18b.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\global-user-nav-drawer.830d6c10c9fea7fc134e.module.css",
+      "PackagePath": "staticwebassets\\lib\\global-user-nav-drawer.830d6c10c9fea7fc134e.module.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\keyboard-shortcuts-dialog-252ea17b8692.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\keyboard-shortcuts-dialog-252ea17b8692.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\notifications-global-54f34167118d.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\notifications-global-54f34167118d.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\primer-3f55af1462e6.css",
+      "PackagePath": "staticwebassets\\lib\\primer-3f55af1462e6.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\primer-primitives-ebd37ecbf27d.css",
+      "PackagePath": "staticwebassets\\lib\\primer-primitives-ebd37ecbf27d.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\primer-react-css.8570b2718b0a9c0c8387.module.css",
+      "PackagePath": "staticwebassets\\lib\\primer-react-css.8570b2718b0a9c0c8387.module.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\react-code-view-91d858e14867.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\react-code-view-91d858e14867.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\react-code-view.5cd91984ea3db66bbc7b.module.css",
+      "PackagePath": "staticwebassets\\lib\\react-code-view.5cd91984ea3db66bbc7b.module.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\react-lib-7b7b5264f6c1.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\react-lib-7b7b5264f6c1.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\repositories-57ecf4afba64.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\repositories-57ecf4afba64.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\repository-0f7cf89e325a.css",
+      "PackagePath": "staticwebassets\\lib\\repository-0f7cf89e325a.css"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\ui_packages_code-view-shared_hooks_use-canonical-object_ts-ui_packages_code-view-shared_hooks-9a3d65-d20e0dfc3fa8.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\ui_packages_code-view-shared_hooks_use-canonical-object_ts-ui_packages_code-view-shared_hooks-9a3d65-d20e0dfc3fa8.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\ui_packages_commit-attribution_index_ts-ui_packages_commit-checks-status_index_ts-ui_packages-f45efb-62ec013f60c5.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\ui_packages_commit-attribution_index_ts-ui_packages_commit-checks-status_index_ts-ui_packages-f45efb-62ec013f60c5.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\ui_packages_copy-to-clipboard_index_ts-ui_packages_react-core_use-feature-flag_ts-ui_packages-9fa6b6-1dc905b5ad61.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\ui_packages_copy-to-clipboard_index_ts-ui_packages_react-core_use-feature-flag_ts-ui_packages-9fa6b6-1dc905b5ad61.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\ui_packages_onfocus_onfocus_ts-ui_packages_trusted-types-policies_policy_ts-ui_packages_trust-0eb5c4-372296785620.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\ui_packages_onfocus_onfocus_ts-ui_packages_trusted-types-policies_policy_ts-ui_packages_trust-0eb5c4-372296785620.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\ui_packages_paths_index_ts-95eadd06c410.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\ui_packages_paths_index_ts-95eadd06c410.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\ui_packages_react-core_create-browser-history_ts-ui_packages_safe-storage_safe-storage_ts-ui_-682c2c-40bb20608465.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\ui_packages_react-core_create-browser-history_ts-ui_packages_safe-storage_safe-storage_ts-ui_-682c2c-40bb20608465.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\ui_packages_react-core_register-app_ts-6857ea187add.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\ui_packages_react-core_register-app_ts-6857ea187add.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\ui_packages_react-core_register-partial_ts-ui_packages_global-create-menu_GlobalCreateMenu_tsx-544eee7a4dad.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\ui_packages_react-core_register-partial_ts-ui_packages_global-create-menu_GlobalCreateMenu_tsx-544eee7a4dad.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\ui_packages_ref-selector_RefSelector_tsx-7b0796d1324c.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\ui_packages_ref-selector_RefSelector_tsx-7b0796d1324c.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\ui_packages_repos-file-tree-view_repos-file-tree-view_ts-ui_packages_feature-request_FeatureR-ec5225-46db3594ec49.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\ui_packages_repos-file-tree-view_repos-file-tree-view_ts-ui_packages_feature-request_FeatureR-ec5225-46db3594ec49.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\ui_packages_updatable-content_updatable-content_ts-a2009221d154.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\ui_packages_updatable-content_updatable-content_ts-a2009221d154.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_braintree_browser-detection_dist_browser-detection_js-node_modules_stack-68835d-a18220f1db8d.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_braintree_browser-detection_dist_browser-detection_js-node_modules_stack-68835d-a18220f1db8d.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_color-convert_index_js-0e07cc183eed.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_color-convert_index_js-0e07cc183eed.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_delegated-events_dist_index_js-node_modules_github_catalyst_lib_index_js-06ff531-bf7e5a3732fd.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_delegated-events_dist_index_js-node_modules_github_catalyst_lib_index_js-06ff531-bf7e5a3732fd.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_dompurify_dist_purify_js-89a69c248502.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_dompurify_dist_purify_js-89a69c248502.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_arianotify-polyfill_ariaNotify-polyfill_js-node_modules_github_mi-247092-627b030d3acc.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_arianotify-polyfill_ariaNotify-polyfill_js-node_modules_github_mi-247092-627b030d3acc.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_auto-complete-element_dist_index_js-node_modules_github_details-d-ed9a97-841122a1e9d4.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_auto-complete-element_dist_index_js-node_modules_github_details-d-ed9a97-841122a1e9d4.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_catalyst_lib_index_js-node_modules_github_clipboard-copy-element_-782ca5-54763cd55b96.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_catalyst_lib_index_js-node_modules_github_clipboard-copy-element_-782ca5-54763cd55b96.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_catalyst_lib_index_js-node_modules_github_hydro-analytics-client_-7901e7-dc88587c14ed.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_catalyst_lib_index_js-node_modules_github_hydro-analytics-client_-7901e7-dc88587c14ed.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_github_filter--e7f8b0-c7aaf10ff072.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_github_filter--e7f8b0-c7aaf10ff072.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_primer_view-co-10eecb-8056ef83b81e.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_primer_view-co-10eecb-8056ef83b81e.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-2e8678-34feeec9c894.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-2e8678-34feeec9c894.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_delegated-events_dist_in-3efda3-701acb69193f.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_delegated-events_dist_in-3efda3-701acb69193f.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_github_catalyst_lib_inde-dbbea9-e73b311a14f1.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_github_catalyst_lib_inde-dbbea9-e73b311a14f1.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_morphdom_dist_morphdom-e-7c534c-f8a5485c982a.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_morphdom_dist_morphdom-e-7c534c-f8a5485c982a.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_primer_octicons-react_di-b40d97-2d816f3aa913.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_primer_octicons-react_di-b40d97-2d816f3aa913.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_quote-selection_dist_index_js-node_modules_github_textarea-autosi-9e0349-ab4976fc78a6.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_quote-selection_dist_index_js-node_modules_github_textarea-autosi-9e0349-ab4976fc78a6.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_relative-time-element_dist_index_js-7b95699705bc.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_relative-time-element_dist_index_js-7b95699705bc.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-893f9f-6cf3320416b8.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-893f9f-6cf3320416b8.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-e53a3f-62113d33abd1.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-e53a3f-62113d33abd1.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_selector-observer_dist_index_esm_js-f690fd9ae3d5.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_selector-observer_dist_index_esm_js-f690fd9ae3d5.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_session-resume_dist_index_js-node_modules_primer_behaviors_dist_e-ac74c6-5e03381c44b5.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_session-resume_dist_index_js-node_modules_primer_behaviors_dist_e-ac74c6-5e03381c44b5.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_text-expander-element_dist_index_js-cd48220d74d5.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_text-expander-element_dist_index_js-cd48220d74d5.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_lit-html_lit-html_js-ce7225a304c5.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_lit-html_lit-html_js-ce7225a304c5.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_oddbird_popover-polyfill_dist_popover_js-56729c905fe2.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_oddbird_popover-polyfill_dist_popover_js-56729c905fe2.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_behaviors_dist_esm_anchored-position_js-node_modules_fzy_js_index-192fd2-a07608c791cf.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_behaviors_dist_esm_anchored-position_js-node_modules_fzy_js_index-192fd2-a07608c791cf.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_behaviors_dist_esm_anchored-position_js-node_modules_primer_react-4d507b-85f1dac4ce7d.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_behaviors_dist_esm_anchored-position_js-node_modules_primer_react-4d507b-85f1dac4ce7d.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_behaviors_dist_esm_dimensions_js-node_modules_github_jtml_lib_index_js-53b423ede32a.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_behaviors_dist_esm_dimensions_js-node_modules_github_jtml_lib_index_js-53b423ede32a.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_behaviors_dist_esm_focus-zone_js-c9086a4fb62b.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_behaviors_dist_esm_focus-zone_js-c9086a4fb62b.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_behaviors_dist_esm_scroll-into-view_js-node_modules_primer_react_-36c959-37cfafe4655b.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_behaviors_dist_esm_scroll-into-view_js-node_modules_primer_react_-36c959-37cfafe4655b.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_ActionList_index_js-fd5a7039f225.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_ActionList_index_js-fd5a7039f225.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_ActionMenu_ActionMenu_js-node_modules_primer_react_-5b2420-50d72766db7f.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_ActionMenu_ActionMenu_js-node_modules_primer_react_-5b2420-50d72766db7f.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_AvatarStack_AvatarStack_js-node_modules_primer_reac-107a96-b2f6381baf68.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_AvatarStack_AvatarStack_js-node_modules_primer_reac-107a96-b2f6381baf68.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_Box_Box_js-55a9038b54f0.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_Box_Box_js-55a9038b54f0.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_Button_Button_js-b0edbfb6a9e5.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_Button_Button_js-b0edbfb6a9e5.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_ConfirmationDialog_ConfirmationDialog_js-099e8bfead83.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_ConfirmationDialog_ConfirmationDialog_js-099e8bfead83.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_Dialog_Dialog_js-node_modules_primer_react_lib-esm_-bd7638-42ec9a5bc7b9.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_Dialog_Dialog_js-node_modules_primer_react_lib-esm_-bd7638-42ec9a5bc7b9.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_FeatureFlags_FeatureFlags_js-node_modules_primer_re-7faff4-1dd74dc0d752.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_FeatureFlags_FeatureFlags_js-node_modules_primer_re-7faff4-1dd74dc0d752.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_FormControl_FormControl_js-1f51ab2bdcca.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_FormControl_FormControl_js-1f51ab2bdcca.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_Heading_Heading_js-node_modules_primer_react_lib-es-cdb604-830a604eb974.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_Heading_Heading_js-node_modules_primer_react_lib-es-cdb604-830a604eb974.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_PageLayout_PageLayout_js-9928dec2ff12.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_PageLayout_PageLayout_js-9928dec2ff12.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_Text_Text_js-node_modules_primer_react_lib-esm_Text-7845da-9371f5bac483.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_Text_Text_js-node_modules_primer_react_lib-esm_Text-7845da-9371f5bac483.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_lib-esm_TooltipV2_Tooltip_js-4d5019830e3c.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_lib-esm_TooltipV2_Tooltip_js-4d5019830e3c.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_primer_react_node_modules_primer_octicons-react_dist_index_esm_mjs-a5155473fc69.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_primer_react_node_modules_primer_octicons-react_dist_index_esm_mjs-a5155473fc69.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_react-router-dom_dist_index_js-c5568c29d405.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_react-router-dom_dist_index_js-c5568c29d405.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_scroll-anchoring_dist_scroll-anchoring_esm_js-node_modules_github_hotkey-1a1d91-fa9f29a8514b.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_scroll-anchoring_dist_scroll-anchoring_esm_js-node_modules_github_hotkey-1a1d91-fa9f29a8514b.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\vendors-node_modules_virtualized-list_es_index_js-node_modules_github_template-parts_lib_index_js-96453a51f920.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\vendors-node_modules_virtualized-list_es_index_js-node_modules_github_template-parts_lib_index_js-96453a51f920.js.descarga"
+    },
+    {
+      "Id": "C:\\Users\\rampa\\source\\lab4\\tp-lab-4\\wwwroot\\lib\\wp-runtime-71abff841a24.js.descarga",
+      "PackagePath": "staticwebassets\\lib\\wp-runtime-71abff841a24.js.descarga"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.tp-lab-4.props",
       "PackagePath": "build\\tp-lab-4.props"
     },

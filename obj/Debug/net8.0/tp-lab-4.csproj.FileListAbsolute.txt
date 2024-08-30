@@ -266,3 +266,8 @@ C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\tp-lab-4.pdb
 C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\tp-lab-4.genruntimeconfig.cache
 C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\ref\tp-lab-4.dll
 C:\Users\rampa\source\lab4\tp-lab-4\obj\Debug\net8.0\tp-lab-4.csproj.Up2Date
+C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\rampa\source\lab4\tp-lab-4\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<tp_lab_4.Models.Ticket>
+﻿@model tp_lab_4.ViewsModels.TicketViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -9,39 +9,81 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<form asp-action="Index" method="get">
+    <p>
+        Observacion <input type="text" asp-for="@Model.Observacion1" name="busqObs" />
+        Afiliado
+        <select name="busqAfiliado" asp-items="ViewBag.AfiliadoId">
+            <option value="">Todas</option>
+        </select>
+
+        <input type="submit" value="Filtrar" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Afiliados)
+                @Html.DisplayNameFor(model => model.Tickets1.FirstOrDefault().AfiliadoId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FechaSolicitud)
+                @Html.DisplayNameFor(model => model.Tickets1.FirstOrDefault().FechaSolicitud)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Observacion)
+                @Html.DisplayNameFor(model => model.Tickets1.FirstOrDefault().Observacion)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Afiliados.Apellidos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaSolicitud)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Observacion)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Tickets1)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Afiliados.Apellidos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaSolicitud)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Observacion)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<!-- Paginador -->
+<div>
+    <ul class="pagination">
+        @if (Model.CurrentPage > 1)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage - 1)" asp-route-busqObs="@Model.Observacion1" asp-route-busqAfiliado="@Model.AfiliadoId">Previous</a>
+            </li>
+        }
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@i" asp-route-busqObs="@Model.Observacion1" asp-route-busqAfiliado="@Model.AfiliadoId">@i</a>
+            </li>
+        }
+        @if (Model.CurrentPage < Model.TotalPages)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-action="Index" asp-route-page="@(Model.CurrentPage + 1)" asp-route-busqObs="@Model.Observacion1" asp-route-busqAfiliado="@Model.AfiliadoId">Next</a>
+            </li>
+        }
+    </ul>
+</div>
+
+
+
+
