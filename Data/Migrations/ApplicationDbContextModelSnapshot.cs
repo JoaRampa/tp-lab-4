@@ -251,7 +251,7 @@ namespace tp_lab_4.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("afiliados");
+                    b.ToTable("afiliados", (string)null);
                 });
 
             modelBuilder.Entity("tp_lab_4.Models.Estado", b =>
@@ -268,7 +268,7 @@ namespace tp_lab_4.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("estados");
+                    b.ToTable("estados", (string)null);
                 });
 
             modelBuilder.Entity("tp_lab_4.Models.Ticket", b =>
@@ -293,7 +293,7 @@ namespace tp_lab_4.Data.Migrations
 
                     b.HasIndex("AfiliadoId");
 
-                    b.ToTable("tickets");
+                    b.ToTable("tickets", (string)null);
                 });
 
             modelBuilder.Entity("tp_lab_4.Models.TicketDetalle", b =>
@@ -323,7 +323,7 @@ namespace tp_lab_4.Data.Migrations
 
                     b.HasIndex("TicketId");
 
-                    b.ToTable("TicketDetalles");
+                    b.ToTable("TicketDetalles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

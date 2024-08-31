@@ -9,19 +9,22 @@
     <link rel="stylesheet" href="~/tp_lab_4.styles.css" asp-append-version="true" />
     <style>
         body {
-            background-color: rgb(14, 15, 46);
+            /* background: #0f0c29; fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #24243e, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             margin: 0;
         }
-
+        nav {
+            border-bottom: 1px solid #35314a;
+        }
         .content-wrapper {
             flex: 1;
         }
 
         footer {
-            border-top: 1px solid #cccccc;
             text-align: center;
             padding: 1rem;
         }
@@ -34,7 +37,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">tp_lab_4</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
